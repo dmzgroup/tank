@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+<runtime>
+   <time>
+      <frequency value="0.0"/>
+   </time>
+   <event-type name="Event_Launch"/>
+   <event-type name="Event_Detonation"/>
+   <event-type name="Event_Collision"/>
+   <object-type name="spectator"/>
+   </runtime>
+</dmz>

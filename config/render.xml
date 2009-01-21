@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+   <plugins>
+      <plugin name="dmzRenderModuleIsectOSG"/>
+      <plugin name="dmzRenderModulePortalOSG"/>
+      <plugin name="dmzRenderPluginLoadModelOSG"/>
+      <plugin name="dmzRenderPluginObjectOSG"/>
+      <plugin name="dmzRenderPluginLogoOSG"/>
+      <!--
+         Note: Setting this module to unload="false" stops the crash on exit
+               under Linux. This seems to be cause by an "on exit" call in
+               OSG.
+      -->
+      <plugin name="dmzRenderModuleCoreOSGBasic"/>
+   </plugins>
+   <dmzRenderModuleCoreOSGBasic>
+      <plugins>
+         <plugin name="dmzRenderExtViewerOSG"/>
+      </plugins>
+      <dmzRenderExtViewerOSG>
+         <!-- <window left="100" top="100" width="640" height="480" screen="0"/>
+         <fullscreen screen="0"/> -->
+      </dmzRenderExtViewerOSG>
+   </dmzRenderModuleCoreOSGBasic>
+   <dmzRenderModulePortalOSG>
+      <visibility fov="60.0" near="1.0" far="32000.0"/>
+   </dmzRenderModulePortalOSG>
+   <dmzRenderPluginLoadModelOSG>
+      <model name="29Palms" file="/Users/barker/29Palms/29Palms.ive">
+      </model>
+   </dmzRenderPluginLoadModelOSG>
+</dmz>

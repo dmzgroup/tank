@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+<runtime>
+<resource-map>
+   <search>
+      <path value="../../assets/io/images"/>
+      <path value="./assets/"/>
+   </search>
+   <search name="audio">
+      <path value="../../assets/io/sounds"/>
+      <path value="./assets/"/>
+   </search>
+   <resource name="logo" file="DMZ.png"/>
+</resource-map>
+</runtime>
+</dmz>
