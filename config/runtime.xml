@@ -8,5 +8,12 @@
    <event-type name="Event_Detonation"/>
    <event-type name="Event_Collision"/>
    <object-type name="spectator"/>
+   <object-type name="vehicle"/>
+   <object-type name="tank" parent="vehicle"/>
+   <object-type name="m1a1" parent="tank">
+      <render>
+         <model resource="m1a1"/>
+      </render>
+   </object-type>
    </runtime>
 </dmz>

@@ -5,6 +5,7 @@
       <plugin name="dmzRenderModulePortalOSG"/>
       <plugin name="dmzRenderPluginLoadModelOSG"/>
       <plugin name="dmzRenderPluginObjectOSG"/>
+      <plugin name="dmzRenderPluginLightingOSG"/>
       <plugin name="dmzRenderPluginLogoOSG"/>
       <!--
          Note: Setting this module to unload="false" stops the crash on exit
@@ -26,7 +27,7 @@
       <visibility fov="60.0" near="1.0" far="32000.0"/>
    </dmzRenderModulePortalOSG>
    <dmzRenderPluginLoadModelOSG>
-      <model name="29Palms" file="/Users/barker/29Palms/29Palms.ive">
+      <model name="29Palms" file="../../assets/tank/models/29Palms.ive">
       </model>
    </dmzRenderPluginLoadModelOSG>
 </dmz>

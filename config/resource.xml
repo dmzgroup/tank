@@ -3,14 +3,17 @@
 <runtime>
 <resource-map>
    <search>
-      <path value="../../assets/io/images"/>
+      <path value="../../assets/tank/models"/>
+      <path value="../../assets/tank/images"/>
       <path value="./assets/"/>
    </search>
    <search name="audio">
-      <path value="../../assets/io/sounds"/>
+      <path value="../../assets/tank/sounds"/>
       <path value="./assets/"/>
    </search>
    <resource name="logo" file="DMZ.png"/>
+   <resource name="m1a1" file="m1a1.ive"/>
+   <resource name="collision-sound" file="collision.wav" path="audio"/>
 </resource-map>
 </runtime>
 </dmz>
