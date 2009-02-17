@@ -19,6 +19,7 @@
          <plugin name="dmzRenderExtViewerOSG"/>
       </plugins>
       <dmzRenderExtViewerOSG>
+         <window-title value="NPSNET: Dueling Tanks"/>
          <!-- <window left="100" top="100" width="640" height="480" screen="0"/>
          <fullscreen screen="0"/> -->
       </dmzRenderExtViewerOSG>
