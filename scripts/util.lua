@@ -1,0 +1,78 @@
+local Forward = dmz.vector.new ({0, 0, -1})
+local Up = dmz.vector.new ({0, 1, 0})
+
+local function find_coord ()
+   local posResult = nil
+   local oriResult = nil
+   local hil = dmz.object.hil ()
+   local hilPos = dmz.object.position (hil)
+   local hilOri = dmz.object.orientation (hil)
+
+   if hilPos and hilOri then
+      local dir = hilOri:transform (Forward)
+      local isect = dmz.isect.do_isect (
+         { type = dmz.isect.RayTest, start = hilPos, vector = dir },
+         { type = dmz.isect.CosestPoint, })
+
+      if isect and isect[1] then
+         posResult = isect[1].point
+         oriResult = dmz.matrix.new (Up, isect[1].normal)
+      end
+   end
+
+   return posResult, oriResult
+end
+
+local function create_tank (name)
+   local obj = dmz.object.create (name)
+   local pos, ori = find_coord ()
+   if pos then dmz.object.position (obj, nil, pos) end
+   if ori then dmz.object.orientation (obj, nil, ori) end
+   dmz.object.activate (obj)
+   dmz.object.set_temporary (obj)
+   cprint ("Created:", name, "with handle:", obj)
+end
+
+local MKey = 109
+local TKey = 116
+
+local function receive_input_event (self, event)
+   if event.key and event.key.state then
+      if MKey == event.key.value then
+         create_tank ("m1a1")
+      elseif TKey == event.key.value then
+         create_tank ("t72m")
+      end
+   end
+end
+
+
+local function start (self)
+   self.inputObs:init_channels (
+      self.config,
+      dmz.input.Key,
+      receive_input_event,
+      self);
+end
+
+
+local function stop (self)
+   self.inputObs:release_all ()
+end
+
+
+function new (config, name)
+   local self = {
+      start_plugin = start,
+      stop_plugin = stop,
+      name = name,
+      log = dmz.log.new ("lua." .. name),
+      inputObs = dmz.input_observer.new (),
+      config = config,
+   }
+
+   self.log:info ("Creating plugin: " .. name)
+   
+   return self
+end
+

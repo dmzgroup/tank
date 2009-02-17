@@ -13,6 +13,7 @@
    </search>
    <resource name="logo" file="DMZ.png"/>
    <resource name="m1a1" file="m1a1.ive"/>
+   <resource name="t72m" file="t72m.ive"/>
    <resource name="collision-sound" file="collision.wav" path="audio"/>
 </resource-map>
 </runtime>

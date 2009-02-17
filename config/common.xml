@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmz>
 <dmzFileCacheLocal>
-   <path value="../../assets/ioRaceway/textures"/>
-   <path value="../../assets/models/"/>
    <path value="../dmz/scripts/entity"/>
    <path value="./scripts"/>
 </dmzFileCacheLocal>
@@ -15,7 +13,7 @@
    <plugin name="dmzEventModuleBasic"/>
    <plugin name="dmzEventModuleCommonBasic"/>
 	<!-- <plugin name="dmzObjectPluginDump"/> -->
-   <plugin name="dmzEventPluginDump"/>
+   <!-- <plugin name="dmzEventPluginDump"/> -->
    <!-- <plugin name="dmzPluginTermExit"/> -->
 </plugins>
 <dmzArchivePluginObject>

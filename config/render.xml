@@ -27,7 +27,6 @@
       <visibility fov="60.0" near="1.0" far="32000.0"/>
    </dmzRenderModulePortalOSG>
    <dmzRenderPluginLoadModelOSG>
-      <model name="29Palms" file="../../assets/tank/models/29Palms.ive">
-      </model>
+      <model name="29Palms" file="../../assets/tank/models/29Palms.ive"/>
    </dmzRenderPluginLoadModelOSG>
 </dmz>

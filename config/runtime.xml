@@ -15,5 +15,10 @@
          <model resource="m1a1"/>
       </render>
    </object-type>
+   <object-type name="t72m" parent="tank">
+      <render>
+         <model resource="t72m"/>
+      </render>
+   </object-type>
    </runtime>
 </dmz>
