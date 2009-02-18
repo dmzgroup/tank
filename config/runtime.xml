@@ -38,7 +38,7 @@
          <enum value="2.1"/>
       </net>
       <render>
-         <model resource="projectile"/>
+         <model resource="m830"/>
       </render>
    </object-type>
    <object-type name="vehicle">
@@ -61,13 +61,13 @@
          <enum value="1.1.1"/>
       </net>
       <audio>
-         <state
+         <!-- state
             name="Engine_On"
             looped-resource="engine-sound"
             scalar="throttle"
             offset="-1"
             scale="2"
-         />
+         / -->
       </audio>
    </object-type>
    <object-type name="m1a1" parent="tank">

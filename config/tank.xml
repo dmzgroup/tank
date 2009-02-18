@@ -16,6 +16,7 @@
    </munitions>
    <offset x="0.0" y="1.5" z="-6.0"/>
    <rotation x="0.0" y="0.0" z="0.0"/>
+   <speed value="15"/>
    <speed value="1341.12"/>
 </cannon>
 <dmzEntityPluginGroundSimple>

@@ -3,7 +3,6 @@
 <runtime>
 <resource-map>
    <search>
-      <path value="../../assets/io/models"/>
       <path value="../../assets/tank/models"/>
       <path value="../../assets/tank/images"/>
       <path value="./assets/"/>
@@ -13,9 +12,9 @@
       <path value="./assets/"/>
    </search>
    <resource name="logo" file="DMZ.png"/>
-   <resource name="projectile" file="LavaProjectile.ive"/>
    <resource name="m1a1" file="m1a1.ive"/>
    <resource name="t72m" file="t72m.ive"/>
+   <resource name="m830" file="round.ive"/>
    <resource name="engine-sound" file="engine.wav" path="audio"/>
    <resource name="collision-sound" file="collision.wav" path="audio"/>
    <resource name="launch-sound" file="launch.wav" path="audio"/>
