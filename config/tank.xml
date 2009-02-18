@@ -9,7 +9,7 @@
    <plugin name="dmzEntityPluginDustTrail"/>
    <plugin name="dmzWeaponPluginFixedLauncher" scope="cannon"/>
    <plugin name="dmzWeaponPluginGravityBullet" scope="cannon"/>
-   <plugin name="dmzWeaponPluginTimeout"/>
+   <plugin name="dmzObjectPluginTimeout"/>
 </plugins>
 <cannon>
    <munitions>
