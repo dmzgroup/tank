@@ -23,13 +23,14 @@ local function find_coord ()
    return posResult, oriResult
 end
 
-local function create_tank (name)
+local function create_tank (self, name)
    local obj = dmz.object.create (name)
    local pos, ori = find_coord ()
    if pos then dmz.object.position (obj, nil, pos) end
    if ori then dmz.object.orientation (obj, nil, ori) end
    dmz.object.activate (obj)
    dmz.object.set_temporary (obj)
+   self.objects[obj] = { count = 0, }
    cprint ("Created:", name, "with handle:", obj)
 end
 
@@ -39,13 +40,27 @@ local TKey = 116
 local function receive_input_event (self, event)
    if event.key and event.key.state then
       if MKey == event.key.value then
-         create_tank ("m1a1")
+         create_tank (self, "m1a1")
       elseif TKey == event.key.value then
-         create_tank ("t72m")
+         create_tank (self, "t72m")
       end
    end
 end
 
+local function close_event (self, EventHandle)
+   local target = dmz.event.object_handle (EventHandle, dmz.event.TargetHandle)
+   if target then
+      local obj = self.objects[target]
+      if obj then
+         obj.count = obj.count + 1
+         if obj.count == 1 then
+            dmz.object.state (target, nil, "Dead | Smoking")
+         elseif obj.count == 2 then
+            dmz.object.state (target, nil, "Dead | Smoking | Fire")
+         end
+      end
+   end
+end
 
 local function start (self)
    self.inputObs:init_channels (
@@ -53,6 +68,7 @@ local function start (self)
       dmz.input.Key,
       receive_input_event,
       self);
+   self.eventObs:register ("Event_Detonation", {close_event = close_event}, self)
 end
 
 
@@ -68,7 +84,9 @@ function new (config, name)
       name = name,
       log = dmz.log.new ("lua." .. name),
       inputObs = dmz.input_observer.new (),
+      eventObs = dmz.event_observer.new (),
       config = config,
+      objects = {},
    }
 
    self.log:info ("Creating plugin: " .. name)

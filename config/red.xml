@@ -3,6 +3,7 @@
 <archive>
    <object type="t72m">
       <attributes>
+         <state value="Engine_On"/>
          <position x="1295.6" y="-212.0" z="-2066.3"/>
          <orientation
             v0="-0.998523" v1="0.039028" v2="-0.037798"

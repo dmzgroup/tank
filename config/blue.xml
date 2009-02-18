@@ -3,6 +3,7 @@
 <archive>
    <object type="m1a1">
       <attributes>
+         <state value="Engine_On"/>
          <position x="1213.8" y="-197.0" z="-1166.0"/>
          <orientation
             v0="1.0" v1="0.0" v2="0.0"
