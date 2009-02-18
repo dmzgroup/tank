@@ -34,6 +34,7 @@
       </net>
    </object-type>
    <object-type name="m830a1" parent="munitions">
+      <timeout value="5"/>
       <net>
          <enum value="2.1"/>
       </net>
