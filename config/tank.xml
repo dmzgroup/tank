@@ -24,6 +24,7 @@
    <movement speed="25"/>
 </dmzEntityPluginGroundSimple>
 <dmzEntityPluginPortalFollow>
+   <offset x="0.0" y="3" z="1.0"/>
    <offset x="0.0" y="3" z="10"/>
 </dmzEntityPluginPortalFollow>
 <damage>
