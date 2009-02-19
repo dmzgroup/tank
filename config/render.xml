@@ -12,9 +12,10 @@
                under Linux. This seems to be cause by an "on exit" call in
                OSG.
       -->
-      <plugin name="dmzRenderModuleCoreOSGBasic"/>
+      <plugin name="dmzRenderModuleCoreOSGBasic" scope="render" platform="win32|macos"/>
+      <plugin name="dmzRenderModuleCoreOSGBasic" scope="render" platform="linux" unload="false"/>
    </plugins>
-   <dmzRenderModuleCoreOSGBasic>
+   <render>
       <plugins>
          <plugin name="dmzRenderExtViewerOSG"/>
       </plugins>
@@ -23,12 +24,12 @@
          <!-- <window left="100" top="100" width="640" height="480" screen="0"/>
          <fullscreen screen="0"/> -->
       </dmzRenderExtViewerOSG>
-   </dmzRenderModuleCoreOSGBasic>
+   </render>
    <dmzRenderModulePortalOSG>
       <visibility fov="60.0" near="1.0" far="32000.0"/>
    </dmzRenderModulePortalOSG>
    <dmzRenderPluginLoadModelOSG>
-      <model name="29Palms" file="../../assets/tank/models/29Palms.ive"/>
+      <model name="29palms" file="../../assets/tank/models/29palms.ive"/>
    </dmzRenderPluginLoadModelOSG>
    <dmzRenderPluginLightingOSG>
 <!--
