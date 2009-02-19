@@ -34,7 +34,7 @@
       </net>
    </object-type>
    <object-type name="m830a1" parent="munitions">
-      <timeout value="5"/>
+      <timeout value="5" detonate="true"/>
       <net>
          <enum value="2.1"/>
       </net>
@@ -79,6 +79,9 @@
          <model resource="m1a1"/>
       </render>
    </object-type>
+   <object-type name="m1a1-timeout" parent="m1a1">
+      <timeout value="360"/>
+   </object-type>
    <object-type name="t72m" parent="tank">
       <net>
          <enum value="1.1.1.2"/>
@@ -86,6 +89,9 @@
       <render>
          <model resource="t72m"/>
       </render>
+   </object-type>
+   <object-type name="t72m-timeout" parent="t72m">
+      <timeout value="360"/>
    </object-type>
    </runtime>
 </dmz>

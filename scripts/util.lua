@@ -40,9 +40,9 @@ local TKey = 116
 local function receive_input_event (self, event)
    if event.key and event.key.state then
       if MKey == event.key.value then
-         create_tank (self, "m1a1")
+         create_tank (self, "m1a1-timeout")
       elseif TKey == event.key.value then
-         create_tank (self, "t72m")
+         create_tank (self, "t72m-timeout")
       end
    end
 end
