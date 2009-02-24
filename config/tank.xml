@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dmz>
-<plugins>
+<plugin-list>
    <plugin name="dmzEntityPluginGroundSimple"/>
    <plugin name="dmzEntityPluginPortalFollow"/>
    <plugin name="dmzEntityPluginTeleport"/>
@@ -10,7 +10,7 @@
    <plugin name="dmzWeaponPluginFixedLauncher" scope="cannon"/>
    <plugin name="dmzWeaponPluginGravityBullet" scope="cannon"/>
    <plugin name="dmzObjectPluginTimeout"/>
-</plugins>
+</plugin-list>
 <cannon>
    <munitions>
       <object-type name="m830a1"/>

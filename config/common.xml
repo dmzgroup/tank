@@ -4,7 +4,7 @@
    <path value="../dmz/scripts/entity"/>
    <path value="./scripts"/>
 </dmzFileCacheLocal>
-<plugins>
+<plugin-list>
    <plugin name="dmzArchiveModuleBasic"/>
    <plugin name="dmzArchivePluginAutoLoad"/>
    <plugin name="dmzArchivePluginQuickSave"/>
@@ -15,7 +15,7 @@
 	<!-- <plugin name="dmzObjectPluginDump"/> -->
    <!-- <plugin name="dmzEventPluginDump"/> -->
    <!-- <plugin name="dmzPluginTermExit"/> -->
-</plugins>
+</plugin-list>
 <dmzArchivePluginObject>
    <archive>
       <attribute name="Last_Network_Value" contains="True"/>

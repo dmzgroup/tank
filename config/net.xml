@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmz>
-<plugins>
+<plugin-list>
    <plugin name="dmzNetPluginPacket"/>
    <plugin name="dmzNetPluginRemoteDR"/>
    <plugin name="dmzNetModuleLocalDRBasic"/>
@@ -8,7 +8,7 @@
    <plugin name="dmzNetModulePacketCodecBasic"/>
    <plugin name="dmzNetModulePacketIOHawkNL"/>
    <plugin name="dmzNetModuleAttributeMapBasic"/>
-</plugins>
+</plugin-list>
 <dmzNetModulePacketCodecBasic>
    <header>
       <element type="const" base="uint32" value="4004004"/>
@@ -30,13 +30,13 @@
    <packet id="5" name="NetCodecCollision">
       <event-type name="Event_Collision"/>
    </packet>
-   <plugins>
+   <plugin-list>
       <plugin name="dmzNetExtPacketCodecObjectNative" unique="NetCodecGroundVehicle"/>
       <plugin name="dmzNetExtPacketCodecObjectNative" unique="NetCodecShell"/>
       <plugin name="dmzNetExtPacketCodecEventNative" unique="NetCodecLaunch"/>
       <plugin name="dmzNetExtPacketCodecEventNative" unique="NetCodecDetonation"/>
       <plugin name="dmzNetExtPacketCodecEventNative" unique="NetCodecCollision"/>
-   </plugins>
+   </plugin-list>
 </dmzNetModulePacketCodecBasic>
 <NetCodecGroundVehicle>
    <adapter type="position" lnv="true"/>
