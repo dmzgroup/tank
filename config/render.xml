@@ -38,15 +38,50 @@
       <texture resource="logo"/>
    </node>
 <!--
-   <node type="transform">
-      <position x="400" y="400"/>
-      <rotation value="1.570796326794897"/>
-      <rotation value="0.785398163397448"/>
-      <scale x="1.0" y="2.0"/>
+   <node type="transform" name="crosshair">
       <node type="box">
-         <texture resource="logo"/>
+         <min x="-64" y="-64"/>
+         <max x="64" y="64"/>
+         <texture resource="crosshair"/>
       </node>
    </node>
+   <node type="transform" name="crosshair2">
+      <node type="box">
+         <min x="-64" y="-64"/>
+         <max x="0" y="0"/>
+         <texture resource="crosshair"/>
+      </node>
+   </node>
+   <node type="transform" name="crosshair3">
+      <node type="box">
+         <min x="-64" y="-64"/>
+         <max x="0" y="0"/>
+         <texture resource="crosshair"/>
+      </node>
+   </node>
+   <node type="transform" name="crosshair4">
+      <node type="box">
+         <min x="-64" y="-64"/>
+         <max x="0" y="0"/>
+         <texture resource="crosshair"/>
+      </node>
+   </node>
+   <layout node="crosshair">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <layout node="crosshair2">
+      <x type="absolute" value="0.0" flip="true"/>
+      <y type="absolute" value="0.0" flip="true"/>
+   </layout>
+   <layout node="crosshair3">
+      <x type="absolute" value="0.0" flip="true"/>
+      <y type="absolute" value="64.0"/>
+   </layout>
+   <layout node="crosshair4">
+      <x type="absolute" value="64.0"/>
+      <y type="absolute" value="0.0" flip="true"/>
+   </layout>
 -->
 </overlay>
 <dmzRenderPluginLoadModelOSG>

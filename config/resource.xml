@@ -12,6 +12,7 @@
       <path value="./assets/"/>
    </search>
    <resource name="logo" file="DMZ.png"/>
+   <resource name="crosshair" file="crosshair.png"/>
    <resource name="m1a1" file="m1a1.ive"/>
    <resource name="t72m" file="t72m.ive"/>
    <resource name="m830" file="round.ive"/>
