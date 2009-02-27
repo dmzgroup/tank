@@ -7,7 +7,6 @@
    <plugin name="dmzRenderPluginObjectOSG"/>
    <plugin name="dmzRenderPluginLightingOSG" scope="render"/>
    <plugin name="dmzRenderModuleOverlayOSG" scope="overlay"/>
-   <!-- plugin name="dmzRenderPluginLogoOSG"/ -->
    <!--
       Note: Setting this module to unload="false" stops the crash on exit
             under Linux. This seems to be cause by an "on exit" call in
@@ -38,6 +37,17 @@
    <node type="box">
       <texture resource="logo"/>
    </node>
+<!--
+   <node type="transform">
+      <position x="400" y="400"/>
+      <rotation value="1.570796326794897"/>
+      <rotation value="0.785398163397448"/>
+      <scale x="1.0" y="2.0"/>
+      <node type="box">
+         <texture resource="logo"/>
+      </node>
+   </node>
+-->
 </overlay>
 <dmzRenderPluginLoadModelOSG>
    <model name="29palms" file="../../assets/tank/models/29palms.ive"/>
