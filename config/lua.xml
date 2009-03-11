@@ -17,5 +17,6 @@
       <plugin name="dmzQtExtLuaConsole"/>
    </extensions>
    <instance name="util"/>
+   <instance name="detonate"/>
 </dmzLuaModuleBasic>
 </dmz>
