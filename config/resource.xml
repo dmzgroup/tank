@@ -11,9 +11,21 @@
       <path value="../../assets/tank/sounds"/>
       <path value="./assets/"/>
    </search>
+   <resource name="DVTE Vehicle">
+      <render>
+         <articulate>
+            <attribute type="scalar" name="DMZ_Turret_1" node="dof_turret_01" axis="y"/>
+            <attribute type="scalar" name="DMZ_Gun_1" node="dof_gun_01" axis="x"/>
+         </articulate>
+      </render>
+   </resource>
    <resource name="logo" file="DMZ.png"/>
    <resource name="crosshair" file="crosshair.png"/>
-   <resource name="m1a1" file="m1a1.ive"/>
+   <resource name="m1a1" file="m1a1.ive">
+      <render>
+         <articulate template="DVTE Vehicle"/>
+      </render>
+   </resource>
    <resource name="t72m" file="t72m.ive"/>
    <resource name="m830" file="round.ive"/>
    <resource name="engine-sound" file="engine.wav" path="audio"/>

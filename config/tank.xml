@@ -7,19 +7,28 @@
    <plugin name="dmzEntityPluginDamage" scope="damage"/>
    <plugin name="dmzEntityPluginDeadTimer" scope="damage"/>
    <plugin name="dmzEntityPluginDustTrail"/>
-   <plugin name="dmzWeaponPluginFixedLauncher" scope="cannon"/>
+   <plugin name="dmzEntityPluginArticulate" scope="tank"/>
+   <plugin name="dmzWeaponPluginLauncher" scope="cannon"/>
    <plugin name="dmzWeaponPluginGravityBullet" scope="cannon"/>
+   <!-- plugin name="dmzWeaponPluginLaserBullet" scope="cannon"/ -->
    <plugin name="dmzObjectPluginTimeout"/>
 </plugin-list>
+<tank>
+   <component id="3" name="DMZ_Turret_1" rate="2.094395102393195"/>
+   <component id="4" name="DMZ_Gun_1" min="0.0" max="0.785398163397448"/>
+</tank>
 <cannon>
    <munitions>
       <object-type name="m830a1"/>
    </munitions>
    <!-- fire rate one round every six second for m1a1 -->
    <!-- <delay value="6"/> -->
-   <offset x="0.0" y="1.5" z="-6.0"/>
-   <rotation x="0.0" y="0.0" z="0.0"/>
-   <speed value="15"/>
+   <transform>
+      <component z="0.77"/>
+      <component name="DMZ_Turret_1" axis="y" y="1.62" z="-2.3"/>
+      <component name="DMZ_Gun_1" axis="x" z="-2.4"/>
+   </transform>
+   <speed value="1"/>
    <speed value="1341.12"/>
 </cannon>
 <dmzEntityPluginGroundSimple>
@@ -33,5 +42,17 @@
    <timer value="5.0"/>
    <state name="Dead | Smoking | Fire"/>
 </damage>
+<keyboard-controller>
+   <controller>
+      <axis id="1" negative="leftarrow" positive="rightarrow"/>
+      <axis id="2" negative="uparrow" positive="downarrow"/>
+      <axis id="3" negative="d" positive="a"/>
+      <axis id="4" negative="s" positive="w"/>
+      <button id="1" key=","/>
+      <button id="2" key="space"/>
+      <button id="3" key="."/>
+      <button id="4" key="enter"/>
+   </controller>
+</keyboard-controller>
 </dmz>
   

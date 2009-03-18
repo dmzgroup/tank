@@ -2,7 +2,7 @@
 <dmz>
    <plugin-list>
       <plugin name="dmzInputModuleBasic"/>
-      <plugin name="dmzInputPluginControllerKey"/>
+      <plugin name="dmzInputPluginControllerKey" scope="keyboard-controller"/>
       <plugin name="dmzInputPluginControllerMacOS" platform="macos"/>
       <plugin name="dmzInputPluginControllerWin32" platform="win32"/>
       <plugin name="dmzInputPluginExit"/>
