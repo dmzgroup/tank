@@ -55,6 +55,15 @@
          <state name="Dust_Trail" mask="0x004"/>
          <state name="Smoking" mask="0x008"/>
          <state name="Fire" mask="0x010"/>
+         <rule type="scalar" attribute="DMZ_Gun_1"/>
+         <rule type="scalar" attribute="DMZ_Turret_1"/>
+         <rule type="scalar" attribute="throttle"/>
+         <rule type="state"/>
+         <rule type="velocity"/>
+         <rule type="orientation"/>
+         <rule type="position"/>
+         <rule type="heartbeat" value="1.0"/>
+         <rule type="rate-limit"/>
       </net>
    </object-type>
    <object-type name="tank" parent="ground-vehicle">

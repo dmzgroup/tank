@@ -40,12 +40,12 @@
 </dmzNetModulePacketCodecBasic>
 <NetCodecGroundVehicle>
    <adapter type="position" lnv="true"/>
-   <adapter type="velocity" lnv="true"/>
    <adapter type="orientation" lnv="true"/>
+   <adapter type="velocity" lnv="true"/>
    <adapter type="state" lnv="true"/>
-   <adapter type="scalar" attribute="throttle"/>
-   <adapter type="scalar" attribute="DMZ_Turret_1"/>
-   <adapter type="scalar" attribute="DMZ_Gun_1"/>
+   <adapter type="scalar" attribute="throttle" lnv="true"/>
+   <adapter type="scalar" attribute="DMZ_Turret_1" lnv="true"/>
+   <adapter type="scalar" attribute="DMZ_Gun_1" lnv="true"/>
 </NetCodecGroundVehicle>
 <NetCodecShell>
    <adapter type="position" lnv="true"/>
