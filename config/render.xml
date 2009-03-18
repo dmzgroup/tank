@@ -5,6 +5,7 @@
    <plugin name="dmzRenderModulePortalOSG" scope="render"/>
    <plugin name="dmzRenderPluginLoadModelOSG"/>
    <plugin name="dmzRenderPluginObjectOSG"/>
+   <plugin name="dmzRenderPluginArticulateOSG"/>
    <plugin name="dmzRenderPluginLightingOSG" scope="render"/>
    <plugin name="dmzRenderModuleOverlayOSG" scope="overlay"/>
    <!--
