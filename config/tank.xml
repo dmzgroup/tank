@@ -44,14 +44,15 @@
 </damage>
 <keyboard-controller>
    <controller>
-      <axis id="1" negative="leftarrow" positive="rightarrow"/>
-      <axis id="2" negative="uparrow" positive="downarrow"/>
-      <axis id="3" negative="d" positive="a"/>
-      <axis id="4" negative="s" positive="w"/>
+      <axis id="1" negative="a" positive="d"/>
+      <axis id="2" negative="w" positive="s"/>
+      <axis id="3" negative="rightarrow" positive="leftarrow"/>
+      <axis id="4" negative="downarrow" positive="uparrow"/>
       <button id="1" key=","/>
       <button id="2" key="space"/>
       <button id="3" key="."/>
       <button id="4" key="enter"/>
+      <button id="5" key="r"/>
    </controller>
 </keyboard-controller>
 </dmz>

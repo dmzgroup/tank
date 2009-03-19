@@ -34,8 +34,8 @@ local function create_tank (self, name)
    cprint ("Created:", name, "with handle:", obj)
 end
 
-local MKey = 109
-local TKey = 116
+local MKey = dmz.input.get_key_value ("m")
+local TKey = dmz.input.get_key_value ("t")
 
 local function receive_input_event (self, event)
    if event.key and event.key.state then

@@ -43,9 +43,11 @@
    <adapter type="orientation" lnv="true"/>
    <adapter type="velocity" lnv="true"/>
    <adapter type="state" lnv="true"/>
-   <adapter type="scalar" attribute="throttle" lnv="true"/>
-   <adapter type="scalar" attribute="DMZ_Turret_1" lnv="true"/>
-   <adapter type="scalar" attribute="DMZ_Gun_1" lnv="true"/>
+   <adapter type="scalar-array">
+      <attribute name="throttle" lnv="true"/>
+      <attribute name="DMZ_Turret_1" lnv="true"/>
+      <attribute name="DMZ_Gun_1" lnv="true"/>
+   </adapter>
 </NetCodecGroundVehicle>
 <NetCodecShell>
    <adapter type="position" lnv="true"/>
