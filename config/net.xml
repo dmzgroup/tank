@@ -3,12 +3,16 @@
 <plugin-list>
    <plugin name="dmzNetPluginPacket"/>
    <plugin name="dmzNetPluginRemoteDR"/>
+   <plugin name="dmzNetPluginRemoteScalarDR" scope="scalar-dr"/>
    <plugin name="dmzNetModuleLocalDRBasic"/>
    <plugin name="dmzNetPluginRemoteTimeout"/>
    <plugin name="dmzNetModulePacketCodecBasic"/>
    <plugin name="dmzNetModulePacketIOHawkNL"/>
    <plugin name="dmzNetModuleAttributeMapBasic"/>
 </plugin-list>
+<scalar-dr>
+   <attribute name="DMZ_Turret_1" rate="DMZ_Turret_1_Rate"/>
+</scalar-dr>
 <dmzNetModulePacketCodecBasic>
    <header>
       <element type="const" base="uint32" value="4004004"/>
@@ -46,6 +50,7 @@
    <adapter type="scalar-array">
       <attribute name="throttle" lnv="true"/>
       <attribute name="DMZ_Turret_1" lnv="true"/>
+      <attribute name="DMZ_Turret_1_Rate" lnv="true"/>
       <attribute name="DMZ_Gun_1" lnv="true"/>
    </adapter>
 </NetCodecGroundVehicle>

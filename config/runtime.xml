@@ -59,13 +59,14 @@
          <rule type="scalar" attribute="DMZ_Turret_1"/>
          <rule type="scalar" attribute="throttle"/>
          <rule type="state"/>
-         <rule type="zero-velocity"/>
          <rule type="velocity"/>
          <rule type="orientation"/>
          <rule type="skew"/>
          <rule type="position"/>
-         <rule type="heartbeat" value="1.0"/>
          <rule type="rate-limit"/>
+         <rule type="zero-velocity"/>
+         <rule type="scalar" attribute="DMZ_Turret_1_Rate"/>
+         <rule type="heartbeat" value="1.0"/>
       </net>
    </object-type>
    <object-type name="tank" parent="ground-vehicle">
