@@ -5,10 +5,10 @@ local function find_coord ()
    local posResult = nil
    local oriResult = nil
    local hil = dmz.object.hil ()
-   local hilPos = dmz.object.position (hil)
-   local hilOri = dmz.object.orientation (hil)
+   local hilPos, hilOri = dmz.portal.get_view ()
 
    if hilPos and hilOri then
+      dmz.isect.disable_isect (hil)
       local dir = hilOri:transform (Forward)
       local isect = dmz.isect.do_isect (
          { type = dmz.isect.RayTest, start = hilPos, vector = dir },
@@ -18,6 +18,7 @@ local function find_coord ()
          posResult = isect[1].point
          oriResult = dmz.matrix.new (Up, isect[1].normal)
       end
+      dmz.isect.enable_isect (hil)
    end
 
    return posResult, oriResult
