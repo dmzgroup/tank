@@ -3,8 +3,10 @@
    <plugin-list>
       <plugin name="dmzInputModuleBasic"/>
       <plugin name="dmzInputPluginControllerKey" scope="keyboard-controller"/>
+<!--
       <plugin name="dmzInputPluginControllerMacOS" platform="macos"/>
       <plugin name="dmzInputPluginControllerWin32" platform="win32"/>
+-->
       <plugin name="dmzInputPluginExit"/>
       <plugin name="dmzInputPluginKeyEventToMessage"/>
    </plugin-list>
@@ -17,7 +19,6 @@
    </dmzInputPluginKeyEventToMessage>
    <dmzInputPluginControllerMacOS>
       <controller deviceId="2" name="wingman">
-<!-- device="WingMan Cordless Gamepad" name="wingman" -->
          <hatswitch
             north="0"
             northeast="1"

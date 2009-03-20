@@ -20,7 +20,7 @@
       </render>
    </resource>
    <resource name="logo" file="DMZ.png"/>
-   <resource name="crosshair" file="crosshair.png"/>
+   <resource name="crosshairs" file="crosshairs.png"/>
    <resource name="m1a1" file="m1a1.ive">
       <render>
          <articulate template="DVTE Vehicle"/>

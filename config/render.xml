@@ -5,6 +5,7 @@
    <plugin name="dmzRenderModulePortalOSG" scope="render"/>
    <plugin name="dmzRenderPluginLoadModelOSG"/>
    <plugin name="dmzRenderPluginObjectOSG"/>
+   <plugin name="dmzRenderPluginHideObjectOSG"/>
    <plugin name="dmzRenderPluginArticulateOSG"/>
    <plugin name="dmzRenderPluginLightingOSG" scope="render"/>
    <plugin name="dmzRenderModuleOverlayOSG" scope="overlay"/>
@@ -37,53 +38,8 @@
 <overlay>
    <node type="box">
       <texture resource="logo"/>
+      <color r="1" g="1" b="1" a="0.5"/>
    </node>
-<!--
-   <node type="transform" name="crosshair">
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="64" y="64"/>
-         <texture resource="crosshair"/>
-      </node>
-   </node>
-   <node type="transform" name="crosshair2">
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="0" y="0"/>
-         <texture resource="crosshair"/>
-      </node>
-   </node>
-   <node type="transform" name="crosshair3">
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="0" y="0"/>
-         <texture resource="crosshair"/>
-      </node>
-   </node>
-   <node type="transform" name="crosshair4">
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="0" y="0"/>
-         <texture resource="crosshair"/>
-      </node>
-   </node>
-   <layout node="crosshair">
-      <x type="relative" value="0.5"/>
-      <y type="relative" value="0.5"/>
-   </layout>
-   <layout node="crosshair2">
-      <x type="absolute" value="0.0" flip="true"/>
-      <y type="absolute" value="0.0" flip="true"/>
-   </layout>
-   <layout node="crosshair3">
-      <x type="absolute" value="0.0" flip="true"/>
-      <y type="absolute" value="64.0"/>
-   </layout>
-   <layout node="crosshair4">
-      <x type="absolute" value="64.0"/>
-      <y type="absolute" value="0.0" flip="true"/>
-   </layout>
--->
 </overlay>
 <dmzRenderPluginLoadModelOSG>
    <model name="29palms" file="../../assets/tank/models/29palms.ive"/>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<lua>
+   <instance name="tankOverlay" scope="first-person"/>
+</lua>
+<overlay>
+   <node type="transform" name="crosshairs">
+      <node type="switch" name="crosshairs switch">
+         <node type="switch" name="crosshairs target switch">
+            <node type="box">
+               <min x="-64" y="-64"/>
+               <max x="64" y="64"/>
+               <texture resource="crosshairs"/>
+               <color name="crosshairs neutral"/>
+            </node>
+            <node type="box">
+               <min x="-64" y="-64"/>
+               <max x="64" y="64"/>
+               <texture resource="crosshairs"/>
+               <color name="crosshairs active"/>
+            </node>
+         </node>
+      </node>
+   </node>
+   <color name="crosshairs neutral" r="0" g="0" b="0"/>
+   <color name="crosshairs active" r="1" g="0" b="0"/>
+   <layout node="crosshairs">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+</overlay>
+</dmz>
