@@ -4,6 +4,31 @@
    <instance name="tankOverlay" scope="first-person"/>
 </lua>
 <overlay>
+   <node type="transform" name="tank">
+      <node type="transform" name="tank turret">
+         <node type="box">
+            <min x="-64" y="-64"/>
+            <max x="64" y="64"/>
+            <depth value="3"/>
+            <texture resource="tank turret"/>
+            <color name="tank color"/>
+         </node>
+      </node>
+      <node type="box">
+         <min x="-64" y="-64"/>
+         <max x="64" y="64"/>
+         <depth value="2"/>
+         <texture resource="tank hull"/>
+         <color name="tank color"/>
+      </node>
+      <node type="box">
+         <min x="-64" y="-64"/>
+         <max x="64" y="64"/>
+         <depth value="1"/>
+         <texture resource="tank hud back"/>
+         <color a="0.5"/>
+      </node>
+   </node>
    <node type="transform" name="crosshairs">
       <node type="switch" name="crosshairs switch">
          <node type="switch" name="crosshairs target switch">
@@ -22,11 +47,16 @@
          </node>
       </node>
    </node>
+   <color name="tank color" r="0" g="0" b="1"/>
    <color name="crosshairs neutral" r="0" g="0" b="0"/>
    <color name="crosshairs active" r="1" g="0" b="0"/>
    <layout node="crosshairs">
       <x type="relative" value="0.5"/>
       <y type="relative" value="0.5"/>
+   </layout>
+   <layout node="tank">
+      <x type="absolute" value="64" flip="true"/>
+      <y type="absolute" value="64"/>
    </layout>
 </overlay>
 </dmz>

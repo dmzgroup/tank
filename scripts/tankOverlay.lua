@@ -1,7 +1,5 @@
 local Forward = dmz.vector.new {0, 0, -1}
 
-local ZeroHandle = dmz.handle.new (0)
-
 local function update_time_slice (self, time)
 
    local hil = dmz.object.hil ()
@@ -50,6 +48,12 @@ local function receive_input_event (self, event)
    end
 end
 
+local function update_scalar (self, Object, Attr, Value)
+   if self.turret and Object == dmz.object.hil () then
+      dmz.overlay.rotation (self.turret, Value)
+   end
+end
+
 local function start (self)
    self.handle = self.timeSlice:create (update_time_slice, self, self.name)
 
@@ -58,6 +62,8 @@ local function start (self)
       dmz.input.ChannelState,
       receive_input_event,
       self)
+
+   self.objObs:register ("DMZ_Turret_1", {update_object_scalar = update_scalar}, self)
 
    if self.handle and self.active == 0 then self.timeSlice:stop (self.handle) end
 end
@@ -77,10 +83,12 @@ function new (config, name)
       log = dmz.log.new ("lua." .. name),
       timeSlice = dmz.time_slice.new (),
       inputObs = dmz.input_observer.new (),
+      objObs = dmz.object_observer.new (),
       active = 0,
       config = config,
       top = dmz.overlay.lookup_handle ("crosshairs switch"),
       target = dmz.overlay.lookup_handle ("crosshairs target switch"),
+      turret = dmz.overlay.lookup_handle ("tank turret"),
    }
 
    self.log:info ("Creating plugin: " .. name)

@@ -6,9 +6,9 @@
    <plugin name="dmzEntityPluginTeleport"/>
    <plugin name="dmzObjectPluginTimeout"/>
 </plugin-list>
-<dmzLuaModuleBasic>
+<lua>
    <instance name="dmzEntityPluginFreeFly" scope="freefly"/>
-</dmzLuaModuleBasic>
+</lua>
 <freefly>
    <movement speed="100" turn-rate="2.4"/>
    <offset x="0.0" y="0.0" z="0.0"/>
