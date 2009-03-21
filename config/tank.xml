@@ -71,6 +71,7 @@
       <button id="3" key="."/>
       <button id="4" key="enter"/>
       <button id="5" key="r"/>
+      <scale key="shift" value="0.1"/>
    </controller>
 </keyboard-controller>
 </dmz>
