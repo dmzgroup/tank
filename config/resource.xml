@@ -20,10 +20,13 @@
       </render>
    </resource>
    <resource name="logo" file="DMZ.png"/>
-   <resource name="tank turret" file="tank_turret.png"/>
-   <resource name="tank hull" file="tank_hull.png"/>
+   <resource name="tank turret" file="tank_turret_blue.png"/>
+   <resource name="tank hull" file="tank_hull_blue.png"/>
    <resource name="tank hud back" file="tank_hud_back.png"/>
    <resource name="digits" file="tank_digits.png"/>
+   <resource name="tank kills" file="tank_kills.png"/>
+   <resource name="tank hits" file="tank_hits.png"/>
+   <resource name="tank deaths" file="tank_deaths.png"/>
    <resource name="crosshairs" file="crosshairs.png"/>
    <resource name="m1a1" file="m1a1.ive">
       <render>
