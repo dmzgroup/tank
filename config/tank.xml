@@ -29,7 +29,7 @@
    <transform>
       <component z="0.77"/>
       <component name="DMZ_Turret_1" axis="y" y="1.62" z="-2.3"/>
-      <component name="DMZ_Gun_1" axis="x" z="-2.4"/>
+      <component name="DMZ_Gun_1" axis="x" z="-3.8"/>
    </transform>
    <speed value="1"/>
    <speed value="1341.12"/>
@@ -64,6 +64,8 @@
    <controller>
       <axis id="1" negative="a" positive="d"/>
       <axis id="2" negative="w" positive="s"/>
+      <axis id="1" negative="A" positive="D"/>
+      <axis id="2" negative="W" positive="S"/>
       <axis id="3" negative="rightarrow" positive="leftarrow"/>
       <axis id="4" negative="downarrow" positive="uparrow"/>
       <button id="1" key=","/>

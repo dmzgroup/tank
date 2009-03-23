@@ -1,33 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dmz>
+<lua>
+   <instance name="tankScore"/>
+</lua>
 <overlay>
    <node type="transform" name="dashboard">
       <scale x="0.5" y="0.5"/>
       <node type="transform" name="dashboard slider">
-         <position x="0" y="0"/>
+         <position x="-370" y="-192"/>
          <node type="transform">
-            <position x="74" y="2"/>
-            <node type="clone" name="digit3" template="digit"/>
+            <position x="0" y="128"/>
+            <node type="box">
+               <min x="0" y="0"/>
+               <max x="256" y="64"/>
+               <texture resource="tank kills"/>
+               <color name="digit color"/>
+            </node>
          </node>
          <node type="transform">
-            <position x="112" y="2"/>
-            <node type="clone" name="digit2" template="digit"/>
+            <position x="256" y="128"/>
+            <node type="clone" name="kills digit3" template="digit"/>
          </node>
          <node type="transform">
-            <position x="150" y="2"/>
-            <node type="clone" name="digit1" template="digit"/>
+            <position x="290" y="128"/>
+            <node type="clone" name="kills digit2" template="digit"/>
+         </node>
+         <node type="transform">
+            <position x="324" y="128"/>
+            <node type="clone" name="kills digit1" template="digit"/>
+         </node>
+         <node type="transform">
+            <position x="0" y="64"/>
+            <node type="box">
+               <min x="0" y="0"/>
+               <max x="256" y="64"/>
+               <texture resource="tank hits"/>
+               <color name="digit color"/>
+            </node>
+         </node>
+         <node type="transform">
+            <position x="256" y="64"/>
+            <node type="clone" name="hits digit3" template="digit"/>
+         </node>
+         <node type="transform">
+            <position x="290" y="64"/>
+            <node type="clone" name="hits digit2" template="digit"/>
+         </node>
+         <node type="transform">
+            <position x="324" y="64"/>
+            <node type="clone" name="hits digit1" template="digit"/>
+         </node>
+         <node type="transform">
+            <position x="0" y="0"/>
+            <node type="box">
+               <min x="0" y="0"/>
+               <max x="256" y="64"/>
+               <texture resource="tank deaths"/>
+               <color name="digit color"/>
+            </node>
+         </node>
+         <node type="transform">
+            <position x="256" y="0"/>
+            <node type="clone" name="deaths digit3" template="digit"/>
+         </node>
+         <node type="transform">
+            <position x="290" y="0"/>
+            <node type="clone" name="deaths digit2" template="digit"/>
+         </node>
+         <node type="transform">
+            <position x="324" y="0"/>
+            <node type="clone" name="deaths digit1" template="digit"/>
          </node>
       </node>
    </node>
    <layout node="dashboard">
-      <x type="absolute" value="100" flip="true"/>
-      <y type="absolute" value="30" flip="true"/>
+      <x type="absolute" value="0" flip="true"/>
+      <y type="absolute" value="0" flip="true"/>
    </layout>
    <!-- Colors -->
    <color name="digit color" r="0" g="0" b="0"/>
    <!-- Templates -->
    <template name="digit">
-      <node type="switch" which="0" name="switch">
+      <node type="switch" which="10" name="switch">
          <!-- 0 -->
          <node type="box">
             <min x="0" y="0"/>

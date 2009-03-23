@@ -47,7 +47,7 @@
          <enum value="1"/>
       </net>
    </object-type>
-   <object-type name="ground-vehicle">
+   <object-type name="ground-vehicle" parent="vehicle">
       <net>
          <enum value="1.1"/>
          <state name="Engine_On" mask="0x001"/>

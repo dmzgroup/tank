@@ -1,4 +1,5 @@
 local Forward = dmz.vector.new {0, 0, -1}
+local VehicleType = dmz.object_type.new ("vehicle")
 
 local function update_time_slice (self, time)
 
@@ -19,12 +20,15 @@ local function update_time_slice (self, time)
             { type = dmz.isect.RayTest, start = pos, vector = dir, },
             { type = dmz.isect.ClosestPoint, })
 
-         if hits and hits[1].object and hits[1].object ~= 0 then
-            dmz.overlay.enable_single_switch_state (self.target, 1)
-         else
-            dmz.overlay.enable_single_switch_state (self.target, 0)
-         end
+         local which = 0
 
+         if hits and hits[1].object and hits[1].object ~= 0 then
+            local ot = dmz.object.type (hits[1].object)
+            if ot and ot:is_of_type (VehicleType) then
+               which = 1
+            end
+         end
+         dmz.overlay.enable_single_switch_state (self.target, which)
          dmz.isect.enable_isect (hil)
       end
    end
@@ -47,6 +51,7 @@ local function receive_input_event (self, event)
       end
    end
 end
+
 
 local function update_scalar (self, Object, Attr, Value)
    if self.turret and Object == dmz.object.hil () then
