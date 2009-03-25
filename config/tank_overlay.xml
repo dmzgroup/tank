@@ -4,31 +4,12 @@
    <instance name="tankOverlay" scope="first-person"/>
 </lua>
 <overlay>
-   <node type="transform" name="tank">
-      <node type="transform" name="tank turret">
-         <node type="box">
-            <min x="-64" y="-64"/>
-            <max x="64" y="64"/>
-            <depth value="3"/>
-            <texture resource="tank turret"/>
-            <color name="tank color"/>
-         </node>
-      </node>
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="64" y="64"/>
-         <depth value="2"/>
-         <texture resource="tank hull"/>
-         <color name="tank color"/>
-      </node>
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="64" y="64"/>
-         <depth value="1"/>
-         <texture resource="tank hud back"/>
-         <color a="0.5"/>
-      </node>
-   </node>
+<!--
+
+NOTE: The tank turret hud is in blue.xml and red.xml. The score overlay is in
+tank_score.xml.
+
+-->
    <node type="transform" name="crosshairs">
       <node type="switch" name="crosshairs switch">
          <node type="switch" name="crosshairs target switch">
@@ -47,7 +28,6 @@
          </node>
       </node>
    </node>
-   <color name="tank color" r="0" g="0" b="1"/>
    <color name="crosshairs neutral" r="0" g="0" b="0"/>
    <color name="crosshairs active" r="1" g="0" b="0"/>
    <layout node="crosshairs">

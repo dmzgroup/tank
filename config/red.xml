@@ -1,5 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dmz>
+<cannon>
+   <munitions>
+      <object-type name="m830a1"/>
+   </munitions>
+   <!-- fire rate one round every six second for m1a1 -->
+   <!-- <delay value="6"/> -->
+   <transform>
+      <component z="0.95"/>
+      <component name="DMZ_Turret_1" axis="y" y="1.80" z="-0.75"/>
+      <component name="DMZ_Gun_1" axis="x" z="-5.2"/>
+   </transform>
+   <speed value="1"/>
+   <speed value="1341.12"/>
+</cannon>
+<first-person>
+   <input>
+      <channel name="first-person"/>
+   </input>
+   <transform>
+      <component z="0.95"/>
+      <component name="DMZ_Turret_1" axis="y" y="1.80" z="-0.75"/>
+      <component name="DMZ_Gun_1" axis="x"/>
+   </transform>
+</first-person>
 <archive>
    <object type="t72m">
       <attributes>
@@ -18,5 +42,33 @@
       </attributes>
    </object>
 </archive>
+<overlay>
+   <node type="transform" name="tank">
+      <node type="transform" name="tank turret">
+         <node type="box">
+            <min x="-64" y="-64"/>
+            <max x="64" y="64"/>
+            <depth value="3"/>
+            <texture resource="tank turret red"/>
+            <color name="tank color"/>
+         </node>
+      </node>
+      <node type="box">
+         <min x="-64" y="-64"/>
+         <max x="64" y="64"/>
+         <depth value="2"/>
+         <texture resource="tank hull red"/>
+         <color name="tank color"/>
+      </node>
+      <node type="box">
+         <min x="-64" y="-64"/>
+         <max x="64" y="64"/>
+         <depth value="1"/>
+         <texture resource="tank hud back"/>
+         <color a="0.5"/>
+      </node>
+   </node>
+   <color name="tank color" r="1" g="0" b="0"/>
+</overlay>
 </dmz>
   

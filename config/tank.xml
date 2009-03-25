@@ -15,41 +15,23 @@
    <plugin name="dmzWeaponPluginGravityBullet" scope="cannon"/>
    <plugin name="dmzObjectPluginTimeout"/>
 </plugin-list>
+<!--
+
+NOTE: <cannon> and <first-person> are defined in blue.xml and red.xml since
+the tanks dimensions are different.
+
+-->
 <tank>
    <component id="3" name="DMZ_Turret_1" rate="2.094" rate-name="DMZ_Turret_1_Rate"/>
    <component id="4" name="DMZ_Gun_1" rate="1" min="-0.05" max="0.785"/>
    <movement speed="25"/>
 </tank>
-<cannon>
-   <munitions>
-      <object-type name="m830a1"/>
-   </munitions>
-   <!-- fire rate one round every six second for m1a1 -->
-   <!-- <delay value="6"/> -->
-   <transform>
-      <component z="0.77"/>
-      <component name="DMZ_Turret_1" axis="y" y="1.62" z="-2.3"/>
-      <component name="DMZ_Gun_1" axis="x" z="-3.8"/>
-   </transform>
-   <speed value="1"/>
-   <speed value="1341.12"/>
-</cannon>
 <view-switch>
    <switch>
       <channel name="first-person"/>
       <channel name="third-person"/>
    </switch>
 </view-switch>
-<first-person>
-   <input>
-      <channel name="first-person"/>
-   </input>
-   <transform>
-      <component z="0.77"/>
-      <component name="DMZ_Turret_1" axis="y" y="1.62" z="-2.3"/>
-      <component name="DMZ_Gun_1" axis="x"/>
-   </transform>
-</first-person>
 <third-person>
    <input>
       <channel name="third-person"/>
