@@ -84,14 +84,33 @@ local function destroy_object (self, Object)
 end
 
 local function update_object_state (self, Object, Attribute, State, PreviousState)
-   if Object == dmz.object.hil () then
-      if not PreviousState then PreviousState = dmz.mask.new () end
-      if State:contains (DeadState)  and not PreviousState:contains (DeadState) then
+   if not PreviousState then PreviousState = dmz.mask.new () end
+   if State:contains (DeadState)  and not PreviousState:contains (DeadState) then
+      local hil = dmz.object.hil ()
+      if Object == hil then
          self.deaths = self.deaths + 1
+      elseif self.hitList[Object] == hil then
+         self.kills = self.kills + 1
       end
+      self.hitList[Object] = nil
    end
 end
 
+local function close_detonation_event (self, EventHandle, EventType)
+   
+   local source = dmz.event.object_handle (EventHandle, dmz.event.SourceHandle)
+   local target = dmz.event.object_handle (EventHandle, dmz.event.TargetHandle)
+   if source and target then
+      local hil = dmz.object.hil ()
+      local dead = false
+      local state = dmz.object.state (target)
+      if state and state:contains (DeadState) then dead = true end
+      if source == hil and target ~= hil then
+         if not dead then self.hits = self.hits + 1 end
+      end
+      if not dead then self.hitList[target] = source end
+   end
+end
 
 local function start (self)
    self.handle = self.timeSlice:create (update_time_slice, self, self.name)
@@ -110,14 +129,17 @@ local function start (self)
       update_object_state = update_object_state,
    }
    self.objObs:register (nil, callbacks, self)
-end
 
+   self.eventObs:register (
+      "Event_Detonation",
+      {close_event = close_detonation_event,},
+      self)
+end
 
 local function stop (self)
    if self.handle and self.timeSlice then self.timeSlice:destroy (self.handle) end
    self.inputObs:release_all ()
 end
-
 
 function new (config, name)
    local self = {
@@ -128,6 +150,7 @@ function new (config, name)
       timeSlice = dmz.time_slice.new (),
       inputObs = dmz.input_observer.new (),
       objObs = dmz.object_observer.new (),
+      eventObs = dmz.event_observer.new (),
       active = 0,
       config = config,
       kills = 0,
@@ -136,6 +159,7 @@ function new (config, name)
          dmz.overlay.lookup_clone_sub_handle ("kills digit2", "switch"),
          dmz.overlay.lookup_clone_sub_handle ("kills digit3", "switch"),
       },
+      hitList = {},
       hits = 0,
       hitsDigits = {
          dmz.overlay.lookup_clone_sub_handle ("hits digit1", "switch"),

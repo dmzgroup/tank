@@ -55,7 +55,7 @@ local function close_event (self, EventHandle)
       if obj then
          obj.count = obj.count + 1
          if obj.count == 1 then
-            dmz.object.state (target, nil, "Dead | Smoking")
+            dmz.object.state (target, nil, "Smoking")
          elseif obj.count == 2 then
             dmz.object.state (target, nil, "Dead | Smoking | Fire")
          end

@@ -4,6 +4,17 @@
    <instance name="tankOverlay" scope="first-person"/>
 </lua>
 <overlay>
+   <node type="transform" name="dead overlay transform">
+      <node type="switch" which="0" name="dead overlay switch">
+         <node type="group"/>
+         <node type="box">
+            <min x="-0.5" y="-0.5"/>
+            <max x="0.5" y="0.5"/>
+            <color r="1" g="0" b="0" a="0.5"/>
+            <depth value="16"/>
+         </node>
+      </node>
+   </node>
 <!--
 
 NOTE: The tank turret hud is in blue.xml and red.xml. The score overlay is in
@@ -30,6 +41,10 @@ tank_score.xml.
    </node>
    <color name="crosshairs neutral" r="0" g="0" b="0"/>
    <color name="crosshairs active" r="1" g="0" b="0"/>
+   <layout node="dead overlay transform">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="0.5"/>
+   </layout>
    <layout node="crosshairs">
       <x type="relative" value="0.5"/>
       <y type="relative" value="0.5"/>
