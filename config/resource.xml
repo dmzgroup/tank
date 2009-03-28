@@ -21,11 +21,6 @@
    </resource>
    <resource name="logo" file="DMZ.png"/>
    <resource name="tank arrow" file="tank_arrow.png"/>
-   <resource name="tank turret blue" file="tank_turret_blue.png"/>
-   <resource name="tank hull blue" file="tank_hull_blue.png"/>
-   <resource name="tank turret red" file="tank_turret_red.png"/>
-   <resource name="tank hull red" file="tank_hull_red.png"/>
-   <resource name="tank hud back" file="tank_hud_back.png"/>
    <resource name="digits" file="tank_digits.png"/>
    <resource name="tank kills" file="tank_kills.png"/>
    <resource name="tank hits" file="tank_hits.png"/>
