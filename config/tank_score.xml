@@ -8,6 +8,12 @@
       <scale x="0.5" y="0.5"/>
       <node type="transform" name="dashboard slider">
          <position x="-370" y="-192"/>
+         <node type="box">
+            <min x="0" y="-16"/>
+            <max x="370" y="192"/>
+            <color r="1" g="1" b="1" a="0.2"/>
+            <depth value="-1"/>
+         </node>
          <node type="transform">
             <position x="0" y="128"/>
             <node type="box">
