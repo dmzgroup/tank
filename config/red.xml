@@ -42,33 +42,5 @@
       </attributes>
    </object>
 </archive>
-<overlay>
-   <node type="transform" name="tank">
-      <node type="transform" name="tank turret">
-         <node type="box">
-            <min x="-64" y="-64"/>
-            <max x="64" y="64"/>
-            <depth value="3"/>
-            <texture resource="tank turret red"/>
-            <color name="tank color"/>
-         </node>
-      </node>
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="64" y="64"/>
-         <depth value="2"/>
-         <texture resource="tank hull red"/>
-         <color name="tank color"/>
-      </node>
-      <node type="box">
-         <min x="-64" y="-64"/>
-         <max x="64" y="64"/>
-         <depth value="1"/>
-         <texture resource="tank hud back"/>
-         <color a="0.5"/>
-      </node>
-   </node>
-   <color name="tank color" r="1" g="0" b="0"/>
-</overlay>
 </dmz>
   

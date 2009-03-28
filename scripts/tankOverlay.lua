@@ -52,7 +52,7 @@ end
 
 local function update_scalar (self, Object, Attr, Value)
    if self.turret and Object == dmz.object.hil () then
-      dmz.overlay.rotation (self.turret, Value)
+      dmz.overlay.rotation (self.turret, -Value)
    end
 end
 
