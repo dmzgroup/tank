@@ -4,6 +4,20 @@
    <instance name="tankOverlay" scope="first-person"/>
 </lua>
 <overlay>
+   <node type="transform" name="map">
+      <node type="circle">
+         <center x="-1" y="-1"/>
+         <radius value="120"/>
+         <width value="2"/>
+         <color r="0" g="0" b="0.5" a="1"/>
+      </node>
+      <node type="circle">
+         <center x="-1" y="-1"/>
+         <radius value="240"/>
+         <width value="2"/>
+         <color r="0" g="0.5" b="0" a="1"/>
+      </node>
+   </node>
    <node type="transform" name="dead overlay transform">
       <node type="switch" which="0" name="dead overlay switch">
          <node type="group"/>
@@ -42,6 +56,10 @@ tank_score.xml.
    <color name="crosshairs neutral" r="0" g="0" b="0"/>
    <color name="crosshairs active" r="1" g="0" b="0"/>
    <layout node="dead overlay transform">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <layout node="map">
       <x type="relative" value="0.5"/>
       <y type="relative" value="0.5"/>
    </layout>
