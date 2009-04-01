@@ -6,7 +6,6 @@
    <plugin name="dmzRenderPluginLoadModelOSG"/>
    <plugin name="dmzRenderPluginObjectOSG"/>
    <plugin name="dmzRenderPluginParticleEffectsOSG"/>
-   <plugin name="dmzRenderPluginHideObjectOSG"/>
    <plugin name="dmzRenderPluginArticulateOSG"/>
    <plugin name="dmzRenderPluginLightingOSG" scope="render"/>
    <plugin name="dmzRenderModuleOverlayOSG" scope="overlay"/>

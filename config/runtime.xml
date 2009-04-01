@@ -6,9 +6,10 @@
    </time>
    <state name="Engine_On"/>
    <state name="Dead"/>
-   <state name="Dust_Trail"/>
    <state name="Smoking"/>
    <state name="Fire"/>
+   <state name="Dust_Trail"/>
+   <state name="Air_Born"/>
    <event-type name="Event_Launch">
       <audio resource="launch-sound"/>
       <net>
@@ -71,6 +72,7 @@
       <render>
          <particle-effect type="smoking"/>
          <particle-effect type="fire"/>
+         <particle-effect type="dust-trail"/>
       </render>
    </object-type>
    <object-type name="tank" parent="ground-vehicle">

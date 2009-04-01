@@ -22,6 +22,7 @@
    <resource name="logo" file="DMZ.png"/>
    <resource name="smoke" file="smoke.rgb"/>
    <resource name="fire" file="fire.rgb"/>
+   <resource name="dust-trail" file="dust_trail.rgb"/>
    <resource name="tank arrow" file="tank_arrow.png"/>
    <resource name="digits" file="tank_digits.png"/>
    <resource name="tank kills" file="tank_kills.png"/>
