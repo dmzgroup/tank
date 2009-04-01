@@ -4,6 +4,7 @@
 <resource-map>
    <search>
       <path value="../../assets/tank/models"/>
+      <path value="../../assets/tank/terrain"/>
       <path value="../../assets/tank/images"/>
       <path value="./assets/"/>
    </search>
@@ -29,6 +30,8 @@
    <resource name="tank hits" file="tank_hits.png"/>
    <resource name="tank deaths" file="tank_deaths.png"/>
    <resource name="crosshairs" file="crosshairs.png"/>
+   <resource name="29 palms" file="29palms.ive"/>
+   <resource name="sky dome" file="skydome.ive"/>
    <resource name="m1a1" file="m1a1.ive">
       <render>
          <articulate template="DVTE Vehicle"/>
