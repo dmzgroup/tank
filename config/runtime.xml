@@ -68,6 +68,10 @@
          <rule type="scalar" attribute="DMZ_Turret_1_Rate"/>
          <rule type="heartbeat" value="1.0"/>
       </net>
+      <render>
+         <particle-effect type="smoking"/>
+         <particle-effect type="fire"/>
+      </render>
    </object-type>
    <object-type name="tank" parent="ground-vehicle">
       <net>
