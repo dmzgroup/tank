@@ -4,95 +4,110 @@
    <instance name="tankScore"/>
 </lua>
 <overlay>
-   <node type="transform" name="dashboard">
-      <scale x="0.5" y="0.5"/>
-      <node type="transform" name="dashboard slider">
-         <position x="-370" y="-192"/>
+   <node type="transform" name="display">
+      <node type="transform" name="display slider">
+         <position x="500" y="-256"/>
          <node type="box">
-            <min x="0" y="-16"/>
-            <max x="370" y="192"/>
-            <color r="1" g="1" b="1" a="0.2"/>
-            <depth value="-1"/>
+            <min x="0" y="128"/>
+            <max x="256" y="256"/>
+            <depth value="4"/>
+            <texture resource="tank display glare"/>
          </node>
-         <node type="transform">
-            <position x="0" y="128"/>
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="256" y="256"/>
+            <depth value="3"/>
+            <texture resource="tank display"/>
+         </node>
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="256" y="256"/>
+            <depth value="1"/>
+            <texture resource="tank display back"/>
+         </node>
+         <node type="transform" name="display kills">
+            <position x="36" y="204"/>
             <node type="box">
                <min x="0" y="0"/>
-               <max x="256" y="64"/>
+               <max x="128" y="16"/>
                <texture resource="tank kills"/>
                <color name="digit color"/>
+               <depth value="2"/>
+            </node>
+            <node type="transform">
+               <position x="128" y="0"/>
+               <node type="clone" name="kills digit3" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="144" y="0"/>
+               <node type="clone" name="kills digit2" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="160" y="0"/>
+               <node type="clone" name="kills digit1" template="digit"/>
             </node>
          </node>
-         <node type="transform">
-            <position x="256" y="128"/>
-            <node type="clone" name="kills digit3" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="290" y="128"/>
-            <node type="clone" name="kills digit2" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="324" y="128"/>
-            <node type="clone" name="kills digit1" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="0" y="64"/>
+         <node type="transform" name="display hits">
+            <position x="36" y="186"/>
             <node type="box">
                <min x="0" y="0"/>
-               <max x="256" y="64"/>
+               <max x="128" y="16"/>
                <texture resource="tank hits"/>
                <color name="digit color"/>
+               <depth value="2"/>
+            </node>
+            <node type="transform">
+               <position x="128" y="0"/>
+               <node type="clone" name="hits digit3" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="144" y="0"/>
+               <node type="clone" name="hits digit2" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="160" y="0"/>
+               <node type="clone" name="hits digit1" template="digit"/>
             </node>
          </node>
-         <node type="transform">
-            <position x="256" y="64"/>
-            <node type="clone" name="hits digit3" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="290" y="64"/>
-            <node type="clone" name="hits digit2" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="324" y="64"/>
-            <node type="clone" name="hits digit1" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="0" y="0"/>
+         <node type="transform" name="display deaths">
+            <position x="36" y="168"/>
             <node type="box">
                <min x="0" y="0"/>
-               <max x="256" y="64"/>
+               <max x="128" y="16"/>
                <texture resource="tank deaths"/>
                <color name="digit color"/>
+               <depth value="2"/>
+            </node>
+            <node type="transform">
+               <position x="128" y="0"/>
+               <node type="clone" name="deaths digit3" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="144" y="0"/>
+               <node type="clone" name="deaths digit2" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="160" y="0"/>
+               <node type="clone" name="deaths digit1" template="digit"/>
             </node>
          </node>
-         <node type="transform">
-            <position x="256" y="0"/>
-            <node type="clone" name="deaths digit3" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="290" y="0"/>
-            <node type="clone" name="deaths digit2" template="digit"/>
-         </node>
-         <node type="transform">
-            <position x="324" y="0"/>
-            <node type="clone" name="deaths digit1" template="digit"/>
-         </node>
+
       </node>
    </node>
-   <layout node="dashboard">
+   <layout node="display">
       <x type="absolute" value="0" flip="true"/>
       <y type="absolute" value="0" flip="true"/>
    </layout>
    <!-- Colors -->
-   <color name="digit color" r="0" g="0" b="0"/>
+   <color name="digit color" r="0" g="0.75" b="0"/>
    <!-- Templates -->
    <template name="digit">
       <node type="switch" which="10" name="switch">
          <!-- 0 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.9375"/>
@@ -102,8 +117,8 @@
          <!-- 1 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.875"/>
@@ -113,8 +128,8 @@
          <!-- 2 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.8125"/>
@@ -124,8 +139,8 @@
          <!-- 3 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.75"/>
@@ -135,8 +150,8 @@
          <!-- 4 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.6875"/>
@@ -146,8 +161,8 @@
          <!-- 5 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.625"/>
@@ -157,8 +172,8 @@
          <!-- 6 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.5625"/>
@@ -168,8 +183,8 @@
          <!-- 7 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.5"/>
@@ -179,8 +194,8 @@
          <!-- 8 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.4375"/>
@@ -190,8 +205,8 @@
          <!-- 9 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.375"/>
@@ -201,8 +216,8 @@
          <!-- Blank - 10 -->
          <node type="box">
             <min x="0" y="0"/>
-            <max x="32" y="64"/>
-            <depth value="1"/>
+            <max x="16" y="16"/>
+            <depth value="2"/>
             <color name="digit color"/>
             <texture resource="digits">
                <min x="0" y="0.3125"/>

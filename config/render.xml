@@ -26,12 +26,14 @@
    </viewer>
    <visibility fov="60.0" near="1.0" far="32000.0"/>
 </render>
+<!--
 <overlay>
    <node type="box">
       <texture resource="logo"/>
       <color r="1" g="1" b="1" a="0.5"/>
    </node>
 </overlay>
+-->
 <terrain>
    <model resource="29 palms"/>
    <model resource="sky dome" isect="false"/>

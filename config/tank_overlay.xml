@@ -4,26 +4,76 @@
    <instance name="tankOverlay" scope="first-person"/>
 </lua>
 <overlay>
-<!--
-   <node type="transform" name="map">
-      <node type="circle">
-         <center x="-1" y="-1"/>
-         <radius value="120"/>
-         <width value="2"/>
-         <color r="0" g="0" b="0.5" a="1"/>
-      </node>
-      <node type="circle">
-         <center x="-1" y="-1"/>
-         <radius value="240"/>
-         <width value="2"/>
-         <color r="0" g="0.5" b="0" a="1"/>
+   <node type="transform" name="logo">
+      <node type="box">
+         <min x="-128.0" y="-65.0"/>
+         <max x="128.0" y="-2.0"/>
+         <texture resource="npsnet"/>
+         <depth value="4"/>
+         <color r="1" g="1" b="1" a="0.25"/>
       </node>
    </node>
-   <layout node="map">
+   <layout node="logo">
       <x type="relative" value="0.5"/>
-      <y type="relative" value="0.5"/>
+      <y type="relative" value="1.0"/>
    </layout>
--->
+   <node type="transform" name="hud">
+      <node type="transform" name="hud slider">
+         <node type="box">
+            <min x="-2000" y="0.0"/>
+            <max x="-96" y="64"/>
+            <texture resource="tank hud side"/>
+            <depth value="3"/>
+         </node>
+         <node type="box">
+            <min x="-96" y="0.0"/>
+            <max x="-64" y="128"/>
+            <texture resource="tank hud left"/>
+            <depth value="3"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="0.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map"/>
+            <depth value="4"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="0.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map rings"/>
+            <depth value="3"/>
+            <color r="0" g="0.75" b="0"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="0.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map back"/>
+            <depth value="1"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="64.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map glare"/>
+            <depth value="5"/>
+         </node>
+         <node type="box">
+            <min x="64" y="0.0"/>
+            <max x="96" y="128"/>
+            <texture resource="tank hud right"/>
+            <depth value="3"/>
+         </node>
+         <node type="box">
+            <min x="96" y="0.0"/>
+            <max x="2000" y="64"/>
+            <texture resource="tank hud side"/>
+            <depth value="3"/>
+         </node>
+      </node>
+   </node>
+   <layout node="hud">
+      <x type="relative" value="0.5"/>
+      <y type="absolute" value="0.0"/>
+   </layout>
    <node type="transform" name="dead overlay transform">
       <node type="switch" which="0" name="dead overlay switch">
          <node type="group"/>
@@ -75,5 +125,27 @@
       <x type="relative" value="0.5"/>
       <y type="relative" value="0.5"/>
    </layout>
+   <template name="blue dot">
+      <node type="transform" name="dot">
+         <node type="box">
+            <min x="-8" y="-8"/>
+            <max x="8" y="8"/>
+            <texture resource="tank hud map dot"/>
+            <color r="0" g="0" b="0.75"/>
+            <depth value="2"/>
+         </node>
+      </node>
+   </template>
+   <template name="red dot">
+      <node type="transform" name="dot">
+         <node type="box">
+            <min x="-8" y="-8"/>
+            <max x="8" y="8"/>
+            <texture resource="tank hud map dot"/>
+            <color r="0.75" g="0" b="0"/>
+            <depth value="2"/>
+         </node>
+      </node>
+   </template>
 </overlay>
 </dmz>

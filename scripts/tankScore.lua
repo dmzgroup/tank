@@ -1,5 +1,5 @@
 
-local SliderSpeed = 3.0
+local SliderSpeed = 400.0
 local DeadState = dmz.definitions.lookup_state ("Dead")
 
 local function update_digits (digits, value)
@@ -38,22 +38,20 @@ local function update_time_slice (self, time)
    update_digits (self.killsDigits, self.kills)
    update_digits (self.hitsDigits, self.hits)
    update_digits (self.deathsDigits, self.deaths)
---[[
+
    if self.slider then
-      --if time > 0.1 then cprint (time) time = 0.1 end
       if self.dashstate then
          local x = dmz.overlay.position (self.slider)
-         if x > 0 then x = x - (400 * time * SliderSpeed) end
-         if x < 0 then x = 0 end
-         dmz.overlay.position (self.slider, x, 0)
+         if x > -256 then x = x - (time * SliderSpeed) end
+         if x < -256 then x = -256 end
+         dmz.overlay.position (self.slider, x, -256)
       else
          local x = dmz.overlay.position (self.slider)
-         if x < 300 then x = x + (400 * time * SliderSpeed) end
-         if x > 300 then x = 300 end
-         dmz.overlay.position (self.slider, x, 0)
+         if x < 0 then x = x + (time * SliderSpeed) end
+         if x > 0 then x = 0 end
+         dmz.overlay.position (self.slider, x, -256)
       end
    end
---]]
 end
 
 local function receive_input_event (self, event)
@@ -70,7 +68,7 @@ local function receive_input_event (self, event)
    end
 
    if event.button then
-      if event.button.which == 2 and event.button.value then
+      if event.button.which == 1 and event.button.value then
          self.dashstate = not self.dashstate
       end
    end
@@ -172,7 +170,7 @@ function new (config, name)
          dmz.overlay.lookup_clone_sub_handle ("deaths digit2", "switch"),
          dmz.overlay.lookup_clone_sub_handle ("deaths digit3", "switch"),
       },
-      slider = dmz.overlay.lookup_handle ("dashboard slider"),
+      slider = dmz.overlay.lookup_handle ("display slider"),
       dashstate = true,
    }
 

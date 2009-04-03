@@ -21,11 +21,25 @@
       </render>
    </resource>
    <resource name="logo" file="DMZ.png"/>
+   <resource name="npsnet" file="npsnet_overlay.png"/>
    <resource name="smoke" file="smoke.rgb"/>
    <resource name="fire" file="fire.rgb"/>
    <resource name="dust-trail" file="dust_trail.rgb"/>
    <resource name="tank arrow" file="tank_arrow.png"/>
-   <resource name="digits" file="tank_digits.png"/>
+   <resource name="digits" file="tank_digits2.png"/>
+   <resource name="tank display" file="tank_display.png"/>
+   <resource name="tank display back" file="tank_display_back.png"/>
+   <resource name="tank display glare" file="tank_display_glare.png"/>
+   <resource name="tank hud map" file="tank_hud_map.png"/>
+   <resource name="tank hud map rings" file="tank_hud_map_rings.png"/>
+   <resource name="tank hud map back" file="tank_hud_map_back.png"/>
+   <resource name="tank hud map glare" file="tank_hud_map_glare.png"/>
+   <resource name="tank hud display" file="tank_hud_display.png"/>
+   <resource name="tank hud display glare" file="tank_hud_display_glare.png"/>
+   <resource name="tank hud left" file="tank_hud_left.png"/>
+   <resource name="tank hud right" file="tank_hud_right.png"/>
+   <resource name="tank hud side" file="tank_hud_side.png"/>
+   <resource name="tank hud map dot" file="tank_hud_map_dot.png"/>
    <resource name="tank kills" file="tank_kills.png"/>
    <resource name="tank hits" file="tank_hits.png"/>
    <resource name="tank deaths" file="tank_deaths.png"/>
