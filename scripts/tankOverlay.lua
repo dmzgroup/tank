@@ -26,7 +26,7 @@ local function update_time_slice (self, time)
             local ot = dmz.object.type (hits[1].object)
             if ot and ot:is_of_type (VehicleType) then which = 1 end
          end
-         dmz.overlay.enable_single_switch_state (self.target, which)
+         dmz.overlay.enable_switch_state_single (self.target, which)
          dmz.isect.enable_isect (hil)
       end
    end
@@ -40,11 +40,11 @@ local function receive_input_event (self, event)
       if self.active == 1 then
          self.timeSlice:start (self.handle)
          if self.top then
-            dmz.overlay.enable_single_switch_state (self.top, 0)
+            dmz.overlay.enable_switch_state_single (self.top, 0)
          end
       elseif self.active == 0 then
          self.timeSlice:stop (self.handle)
-         dmz.overlay.all_switch_state (self.top, false)
+         dmz.overlay.switch_state_all (self.top, false)
       end
    end
 end

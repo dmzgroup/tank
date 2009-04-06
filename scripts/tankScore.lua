@@ -28,9 +28,9 @@ local function update_digits (digits, value)
       end
    end
 
-   dmz.overlay.enable_single_switch_state (digits[1], v1);
-   dmz.overlay.enable_single_switch_state (digits[2], v2);
-   dmz.overlay.enable_single_switch_state (digits[3], v3);
+   dmz.overlay.enable_switch_state_single (digits[1], v1);
+   dmz.overlay.enable_switch_state_single (digits[2], v2);
+   dmz.overlay.enable_switch_state_single (digits[3], v3);
 end
 
 local function update_time_slice (self, time)
