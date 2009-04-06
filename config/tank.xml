@@ -15,6 +15,7 @@
    <plugin name="dmzWeaponPluginLauncher" scope="cannon"/>
    <plugin name="dmzWeaponPluginGravityBullet" scope="cannon"/>
    <plugin name="dmzObjectPluginTimeout"/>
+   <plugin name="dmzRenderPluginRadarOverlay" scope="radar"/>
 </plugin-list>
 <!--
 
@@ -22,6 +23,10 @@ NOTE: <cannon> and <first-person> are defined in blue.xml and red.xml since
 the tanks dimensions are different.
 
 -->
+<radar>
+   <radius value="58"/>
+   <scale value="0.058"/>
+</radar>
 <tank>
    <component id="3" name="DMZ_Turret_1" rate="2.094" rate-name="DMZ_Turret_1_Rate"/>
    <component id="4" name="DMZ_Gun_1" rate="1" min="-0.05" max="0.785"/>

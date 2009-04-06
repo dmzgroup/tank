@@ -95,6 +95,7 @@
       </net>
       <render>
          <model resource="m1a1"/>
+         <overlay name="blue dot"/>
       </render>
    </object-type>
    <object-type name="m1a1-timeout" parent="m1a1">
@@ -106,6 +107,7 @@
       </net>
       <render>
          <model resource="t72m"/>
+         <overlay name="red dot"/>
       </render>
    </object-type>
    <object-type name="t72m-timeout" parent="t72m">

@@ -44,6 +44,10 @@
             <depth value="3"/>
             <color r="0" g="0.75" b="0"/>
          </node>
+         <node type="transform">
+            <position x="0" y="64"/>
+            <node type="transform" name="radar"/>
+         </node>
          <node type="box">
             <min x="-64" y="0.0"/>
             <max x="64" y="128"/>
@@ -126,24 +130,28 @@
       <y type="relative" value="0.5"/>
    </layout>
    <template name="blue dot">
-      <node type="transform" name="dot">
-         <node type="box">
-            <min x="-8" y="-8"/>
-            <max x="8" y="8"/>
-            <texture resource="tank hud map dot"/>
-            <color r="0" g="0" b="0.75"/>
-            <depth value="2"/>
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <node type="box">
+               <min x="-8" y="-8"/>
+               <max x="8" y="8"/>
+               <texture resource="tank hud map dot"/>
+               <color r="0" g="0" b="0.75"/>
+               <depth value="2"/>
+            </node>
          </node>
       </node>
    </template>
    <template name="red dot">
-      <node type="transform" name="dot">
-         <node type="box">
-            <min x="-8" y="-8"/>
-            <max x="8" y="8"/>
-            <texture resource="tank hud map dot"/>
-            <color r="0.75" g="0" b="0"/>
-            <depth value="2"/>
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <node type="box">
+               <min x="-8" y="-8"/>
+               <max x="8" y="8"/>
+               <texture resource="tank hud map dot"/>
+               <color r="0.75" g="0" b="0"/>
+               <depth value="2"/>
+            </node>
          </node>
       </node>
    </template>
