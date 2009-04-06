@@ -30,6 +30,9 @@
    <object-type name="spectator">
    </object-type>
    <object-type name="munitions">
+      <render>
+         <isect disable="true"/>
+      </render>
       <net>
          <enum value="2"/>
       </net>

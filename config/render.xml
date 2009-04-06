@@ -7,6 +7,7 @@
    <plugin name="dmzRenderPluginObjectOSG"/>
    <plugin name="dmzRenderPluginParticleEffectsOSG"/>
    <plugin name="dmzRenderPluginArticulateOSG"/>
+   <plugin name="dmzRenderPluginDisableObjectIsect"/>
    <plugin name="dmzRenderPluginLightingOSG" scope="render"/>
    <plugin name="dmzRenderModuleOverlayOSG" scope="overlay"/>
    <!--
