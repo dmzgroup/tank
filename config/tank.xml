@@ -10,6 +10,7 @@
    <plugin name="dmzEntityPluginTeleport"/>
    <plugin name="dmzEntityPluginDamage" scope="damage"/>
    <plugin name="dmzEntityPluginDeadTimer" scope="damage"/>
+   <plugin name="dmzEntityPluginRestoreHealth" scope="damage"/>
    <plugin name="dmzEntityPluginOverlayDead"/>
    <plugin name="dmzEntityPluginDustTrail"/>
    <plugin name="dmzWeaponPluginLauncher" scope="cannon"/>

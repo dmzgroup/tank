@@ -40,6 +40,9 @@
       <attributes name="Object_Human_In_The_Loop">
          <flag value="true"/>
       </attributes>
+      <attributes name="Entity_Health_Value">
+         <scalar value="100"/>
+      </attributes>
    </object>
 </archive>
 </dmz>
