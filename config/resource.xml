@@ -25,6 +25,7 @@
    <resource name="smoke" file="smoke.rgb"/>
    <resource name="fire" file="fire.rgb"/>
    <resource name="dust-trail" file="dust_trail.rgb"/>
+   <resource name="gradient" file="gradient.png"/>
    <resource name="tank arrow" file="tank_arrow.png"/>
    <resource name="digits" file="tank_digits2.png"/>
    <resource name="tank display" file="tank_display.png"/>

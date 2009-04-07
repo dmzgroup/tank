@@ -2,6 +2,7 @@
 <dmz>
 <lua>
    <instance name="tankOverlay" scope="first-person"/>
+   <instance name="tankHit"/>
 </lua>
 <overlay>
    <node type="transform" name="logo">
@@ -89,6 +90,43 @@
          </node>
       </node>
    </node>
+   <node type="switch" which="-1" name="hit left overlay switch">
+      <node type="transform" name="hit left overlay layout transform">
+         <rotation value="3.141592653589793"/>
+         <node type="transform" name="hit left overlay slider">
+            <position x="200"/>
+            <node type="box">
+               <min x="-200" y="-1500"/>
+               <max x="0" y="1500"/>
+               <color r="1" g="0" b="0" a="0.5"/>
+               <depth value="-1"/>
+               <texture resource="gradient"/>
+            </node>
+         </node>
+      </node>
+   </node>
+   <layout node="hit left overlay layout transform">
+      <x type="absolute" value="0.0"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <node type="switch" which="-1" name="hit right overlay switch">
+      <node type="transform" name="hit right overlay layout transform">
+         <node type="transform" name="hit right overlay slider">
+            <position x="200"/>
+            <node type="box">
+               <min x="-200" y="-1500"/>
+               <max x="0" y="1500"/>
+               <color r="1" g="0" b="0" a="0.5"/>
+               <depth value="-1"/>
+               <texture resource="gradient"/>
+            </node>
+         </node>
+      </node>
+   </node>
+   <layout node="hit right overlay layout transform">
+      <x type="relative" value="1.0"/>
+      <y type="relative" value="0.5"/>
+   </layout>
    <node type="transform" name="crosshairs">
       <node type="switch" name="crosshairs switch">
          <node type="group">
