@@ -25,7 +25,7 @@
    </transform>
 </first-person>
 <archive>
-   <object type="m1a1">
+   <object name="hil" type="m1a1">
       <attributes>
          <state value="Engine_On"/>
          <position x="1197.975586" y="-204.257568" z="-1373.039917"/>
