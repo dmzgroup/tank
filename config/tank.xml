@@ -11,11 +11,13 @@
    <plugin name="dmzEntityPluginDamage" scope="damage"/>
    <plugin name="dmzEntityPluginDeadTimer" scope="damage"/>
    <plugin name="dmzEntityPluginRestoreHealth" scope="damage"/>
+   <plugin name="dmzEntityPluginAutoRestoreHealth"/>
    <plugin name="dmzEntityPluginOverlayDead"/>
    <plugin name="dmzEntityPluginDustTrail"/>
    <plugin name="dmzWeaponPluginLauncher" scope="cannon"/>
    <plugin name="dmzWeaponPluginGravityBullet" scope="cannon"/>
    <plugin name="dmzObjectPluginTimeout"/>
+   <plugin name="dmzObjectPluginAutoCounter" scope="auto-reload"/>
    <plugin name="dmzRenderPluginRadarOverlay" scope="radar"/>
 </plugin-list>
 <!--
@@ -24,6 +26,9 @@ NOTE: <cannon> and <first-person> are defined in blue.xml and red.xml since
 the tanks dimensions are different.
 
 -->
+<auto-reload>
+   <counter attribute="Weapon_1" rate="6"/>
+</auto-reload>
 <radar>
    <radius value="58"/>
    <scale value="0.058"/>
@@ -46,8 +51,9 @@ the tanks dimensions are different.
    <offset x="0.0" y="3" z="10"/>
 </third-person>
 <damage>
-   <timer value="5.0"/>
+   <timer value="8.0"/>
    <state name="Dead | Smoking | Fire"/>
+   <health value="75"/>
 </damage>
 <keyboard-controller>
    <controller>

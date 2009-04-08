@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dmz>
 <cannon>
-   <munitions>
+   <ammo>
       <object-type name="m830a1"/>
-   </munitions>
+   </ammo>
    <!-- fire rate one round every six second for m1a1 -->
    <!-- <delay value="6"/> -->
    <transform>
@@ -42,6 +42,10 @@
       </attributes>
       <attributes name="Entity_Health_Value">
          <scalar value="100"/>
+      </attributes>
+      <attributes name="Weapon_1">
+         <alttype value="m830a1"/>
+         <counter value="40" minimum="0" maximum="40"/>
       </attributes>
    </object>
 </archive>

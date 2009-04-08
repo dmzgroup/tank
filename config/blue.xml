@@ -43,6 +43,10 @@
       <attributes name="Entity_Health_Value">
          <scalar value="100"/>
       </attributes>
+      <attributes name="Weapon_1">
+         <alttype value="m830a1"/>
+         <counter value="44" minimum="0" maximum="44"/>
+      </attributes>
    </object>
 </archive>
 </dmz>
