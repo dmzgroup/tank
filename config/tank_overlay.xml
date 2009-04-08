@@ -171,10 +171,10 @@
       <node type="switch" name="switch">
          <node type="transform" name="transform">
             <node type="box">
-               <min x="-8" y="-8"/>
-               <max x="8" y="8"/>
+               <min x="-1" y="-1"/>
+               <max x="1" y="1"/>
+               <color r="0.3" g="0.3" b="1.0"/>
                <texture resource="tank hud map dot"/>
-               <color r="0" g="0" b="0.75"/>
                <depth value="2"/>
             </node>
          </node>
@@ -184,10 +184,10 @@
       <node type="switch" name="switch">
          <node type="transform" name="transform">
             <node type="box">
-               <min x="-8" y="-8"/>
-               <max x="8" y="8"/>
-               <texture resource="tank hud map dot"/>
+               <min x="-1" y="-1"/>
+               <max x="1" y="1"/>
                <color r="0.75" g="0" b="0"/>
+               <texture resource="tank hud map dot"/>
                <depth value="2"/>
             </node>
          </node>
