@@ -1,5 +1,5 @@
 <RCC>
   <qresource prefix="npsnet" >
-    <file>Cycles-Banner.png</file>
+    <file>NPSNET-Banner.png</file>
   </qresource>
 </RCC>

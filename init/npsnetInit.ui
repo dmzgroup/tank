@@ -5,14 +5,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>620</width>
-    <height>336</height>
+    <width>623</width>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>NPSNET Launch Control Panel</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2" >
+   <item>
+    <widget class="QLabel" name="label_2" >
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="pixmap" >
+      <pixmap resource="npsnetInit.qrc" >:/npsnet/NPSNET-Banner.png</pixmap>
+     </property>
+    </widget>
+   </item>
    <item>
     <widget class="Line" name="line" >
      <property name="orientation" >
