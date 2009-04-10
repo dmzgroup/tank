@@ -11,7 +11,7 @@
    <plugin name="dmzEntityPluginDamage" scope="damage"/>
    <plugin name="dmzEntityPluginDeadTimer" scope="damage"/>
    <plugin name="dmzEntityPluginRestoreHealth" scope="damage"/>
-   <plugin name="dmzEntityPluginAutoRestoreHealth"/>
+   <plugin name="dmzEntityPluginAutoRestoreHealth" scope="restore-health"/>
    <plugin name="dmzEntityPluginOverlayDead"/>
    <plugin name="dmzEntityPluginDustTrail"/>
    <plugin name="dmzWeaponPluginLauncher" scope="cannon"/>
@@ -26,6 +26,9 @@ NOTE: <cannon> and <first-person> are defined in blue.xml and red.xml since
 the tanks dimensions are different.
 
 -->
+<restore-health>
+   <health increase="5" rate="5"/>
+</restore-health>
 <auto-reload>
    <counter attribute="Weapon_1" rate="6"/>
 </auto-reload>

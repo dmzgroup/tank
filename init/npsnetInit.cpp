@@ -255,7 +255,6 @@ dmz_init_npsnet (AppShellInitStruct &init) {
 
    while (ci.isVisible ()) {
 
-      // wait for log window to close
       QApplication::sendPostedEvents (0, -1);
       QApplication::processEvents (QEventLoop::WaitForMoreEvents);
    }

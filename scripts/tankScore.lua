@@ -35,8 +35,17 @@ end
 
 local function update_time_slice (self, time)
 
+   local hil = dmz.object.hil ()
+
+   for obj in pairs (self.deathList) do
+      if hil == self.hitList[obj] then self.kills = self.kills + 1 end
+      self.deathList[obj] = nil
+      self.hitList[obj] = nil
+   end
+
    update_digits (self.killsDigits, self.kills)
    update_digits (self.hitsDigits, self.hits)
+   update_digits (self.shotsDigits, self.shots)
    update_digits (self.deathsDigits, self.deaths)
 
    if self.slider then
@@ -85,12 +94,28 @@ local function update_object_state (self, Object, Attribute, State, PreviousStat
    if not PreviousState then PreviousState = dmz.mask.new () end
    if State:contains (DeadState)  and not PreviousState:contains (DeadState) then
       local hil = dmz.object.hil ()
-      if Object == hil then
-         self.deaths = self.deaths + 1
-      elseif self.hitList[Object] == hil then
-         self.kills = self.kills + 1
+      if Object == hil then self.deaths = self.deaths + 1
+      else self.deathList[Object] = true
       end
-      self.hitList[Object] = nil
+   end
+end
+
+local function update_ammo (self, Object, Attribute, Count)
+   if Object == dmz.object.hil () then
+      update_digits (self.ammoDigits, Count)
+   end
+end
+
+local function update_health (self, Object, Attribute, Value)
+   if Object == dmz.object.hil () then
+      update_digits (self.healthDigits, Value)
+   end
+end
+
+local function close_launch_event (self, EventHandle, EventType)
+   local source = dmz.event.object_handle (EventHandle, dmz.event.SourceHandle)
+   if source == dmz.object.hil () then
+      self.shots = self.shots + 1
    end
 end
 
@@ -100,13 +125,10 @@ local function close_detonation_event (self, EventHandle, EventType)
    local target = dmz.event.object_handle (EventHandle, dmz.event.TargetHandle)
    if source and target then
       local hil = dmz.object.hil ()
-      local dead = false
-      local state = dmz.object.state (target)
-      if state and state:contains (DeadState) then dead = true end
       if source == hil and target ~= hil then
-         if not dead then self.hits = self.hits + 1 end
+         self.hits = self.hits + 1
       end
-      if not dead then self.hitList[target] = source end
+      self.hitList[target] = source
    end
 end
 
@@ -128,9 +150,20 @@ local function start (self)
    }
    self.objObs:register (nil, callbacks, self)
 
+   self.objObs:register ("Weapon_1", {update_object_counter = update_ammo,}, self)
+   self.objObs:register (
+      "Entity_Health_Value",
+      {update_object_scalar = update_health,},
+      self)
+
    self.eventObs:register (
       "Event_Detonation",
       {close_event = close_detonation_event,},
+      self)
+
+   self.eventObs:register (
+      "Event_Launch",
+      {close_event = close_launch_event,},
       self)
 end
 
@@ -158,11 +191,18 @@ function new (config, name)
          dmz.overlay.lookup_clone_sub_handle ("kills digit3", "switch"),
       },
       hitList = {},
+      deathList = {},
       hits = 0,
       hitsDigits = {
          dmz.overlay.lookup_clone_sub_handle ("hits digit1", "switch"),
          dmz.overlay.lookup_clone_sub_handle ("hits digit2", "switch"),
          dmz.overlay.lookup_clone_sub_handle ("hits digit3", "switch"),
+      },
+      shots = 0,
+      shotsDigits = {
+         dmz.overlay.lookup_clone_sub_handle ("shots digit1", "switch"),
+         dmz.overlay.lookup_clone_sub_handle ("shots digit2", "switch"),
+         dmz.overlay.lookup_clone_sub_handle ("shots digit3", "switch"),
       },
       deaths = 0,
       deathsDigits = {
@@ -172,6 +212,16 @@ function new (config, name)
       },
       slider = dmz.overlay.lookup_handle ("display slider"),
       dashstate = true,
+      ammoDigits = {
+         dmz.overlay.lookup_clone_sub_handle ("ammo digit1", "switch"),
+         dmz.overlay.lookup_clone_sub_handle ("ammo digit2", "switch"),
+         dmz.overlay.lookup_clone_sub_handle ("ammo digit3", "switch"),
+      },
+      healthDigits = {
+         dmz.overlay.lookup_clone_sub_handle ("health digit1", "switch"),
+         dmz.overlay.lookup_clone_sub_handle ("health digit2", "switch"),
+         dmz.overlay.lookup_clone_sub_handle ("health digit3", "switch"),
+      },
    }
 
    self.log:info ("Creating plugin: " .. name)

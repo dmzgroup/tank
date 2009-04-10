@@ -73,6 +73,74 @@
             <texture resource="tank hud side"/>
             <depth value="3"/>
          </node>
+         <node type="box">
+            <min x="82" y="14"/>
+            <max x="338" y="46"/>
+            <texture resource="tank hud display"/>
+            <depth value="4"/>
+         </node>
+         <node type="box">
+            <min x="122" y="22"/>
+            <max x="250" y="38"/>
+            <texture resource="tank ammo"/>
+            <color name="digit color"/>
+            <depth value="5"/>
+         </node>
+         <node type="transform" name="display ammo">
+            <position x="250" y="22"/>
+            <node type="transform">
+               <position x="0" y="0"/>
+               <node type="clone" name="ammo digit3" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="16" y="0"/>
+               <node type="clone" name="ammo digit2" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="32" y="0"/>
+               <node type="clone" name="ammo digit1" template="digit"/>
+            </node>
+         </node>
+         <node type="box">
+            <min x="82" y="14"/>
+            <max x="338" y="46"/>
+            <texture resource="tank hud display glare"/>
+            <depth value="6"/>
+         </node>
+         <node type="box">
+            <min x="-338" y="14"/>
+            <max x="-82" y="46"/>
+            <texture resource="tank hud display"/>
+            <depth value="4"/>
+         </node>
+         <node type="box">
+            <min x="-298" y="22"/>
+            <max x="-170" y="38"/>
+            <texture resource="tank health"/>
+            <color name="digit color"/>
+            <depth value="5"/>
+         </node>
+         <node type="transform" name="display health">
+            <position x="-170" y="22"/>
+            <node type="transform">
+               <position x="0" y="0"/>
+               <node type="clone" name="health digit3" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="16" y="0"/>
+               <node type="clone" name="health digit2" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="32" y="0"/>
+               <node type="clone" name="health digit1" template="digit"/>
+            </node>
+         </node>
+         <node type="box">
+            <min x="-338" y="14"/>
+            <max x="-82" y="46"/>
+            <texture resource="tank hud display glare"/>
+            <depth value="6"/>
+         </node>
       </node>
    </node>
    <layout node="hud">
