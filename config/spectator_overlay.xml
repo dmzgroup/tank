@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<!--
+<lua>
+</lua>
+-->
+<overlay>
+   <node type="transform" name="logo">
+      <node type="box">
+         <min x="-128.0" y="-65.0"/>
+         <max x="128.0" y="-2.0"/>
+         <texture resource="npsnet"/>
+         <depth value="4"/>
+         <color r="1" g="1" b="1" a="0.25"/>
+      </node>
+   </node>
+   <layout node="logo">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="1.0"/>
+   </layout>
+   <node type="transform" name="cross">
+      <node type="box">
+         <min x="-32.0" y="-32.0"/>
+         <max x="32.0" y="32.0"/>
+         <texture resource="spectator cross"/>
+         <depth value="4"/>
+         <color r="0" g="1" b="0" a="0.5"/>
+      </node>
+   </node>
+   <layout node="cross">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <node type="transform" name="radar">
+      <scale x="0.5" y="0.5"/>
+      <node type="box">
+         <min x="0" y="0"/>
+         <max x="512" y="512"/>
+         <texture resource="spectator rings"/>
+         <color name="spectator ring color"/>
+      </node>
+      <node type="transform">
+         <rotation degrees="90"/>
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="512" y="512"/>
+            <texture resource="spectator rings"/>
+            <color name="spectator ring color"/>
+         </node>
+      </node>
+      <node type="transform">
+         <rotation degrees="180"/>
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="512" y="512"/>
+            <texture resource="spectator rings"/>
+            <color name="spectator ring color"/>
+         </node>
+      </node>
+      <node type="transform">
+         <rotation degrees="270"/>
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="512" y="512"/>
+            <texture resource="spectator rings"/>
+            <color name="spectator ring color"/>
+         </node>
+      </node>
+   </node>
+   <layout node="radar">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <color name="spectator ring color" r="0" g="1" b="0" a="0.5"/>
+   <template name="red dot">
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <node type="box">
+               <min x="-32" y="-32"/>
+               <max x="32" y="32"/>
+               <color r="0.75" g="0" b="0"/>
+               <texture resource="radar tank"/>
+               <depth value="2"/>
+            </node>
+         </node>
+      </node>
+   </template>
+   <template name="blue dot">
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <node type="box">
+               <min x="-32" y="-32"/>
+               <max x="32" y="32"/>
+               <color r="0" g="0" b="1"/>
+               <texture resource="radar tank"/>
+               <depth value="2"/>
+            </node>
+         </node>
+      </node>
+   </template>
+</overlay>
+</dmz>

@@ -5,6 +5,7 @@
    <plugin name="dmzEntityPluginPortalTether" scope="freefly"/>
    <plugin name="dmzEntityPluginTeleport"/>
    <plugin name="dmzObjectPluginTimeout"/>
+   <plugin name="dmzRenderPluginRadarOverlay" scope="radar"/>
 </plugin-list>
 <lua>
    <instance name="dmzEntityPluginFreeFly" scope="freefly"/>
@@ -13,6 +14,9 @@
    <movement speed="100" turn-rate="2.4"/>
    <offset x="0.0" y="0.0" z="0.0"/>
 </freefly>
+<radar>
+   <radius value="512.0" scale="1.024"/>
+</radar>
 <archive>
    <object type="spectator">
       <attributes>

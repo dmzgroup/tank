@@ -47,7 +47,10 @@
    <resource name="tank deaths" file="tank_deaths.png"/>
    <resource name="tank ammo" file="tank_ammo.png"/>
    <resource name="tank health" file="tank_health.png"/>
+   <resource name="radar tank" file="radar_tank.png"/>
    <resource name="crosshairs" file="crosshairs.png"/>
+   <resource name="spectator cross" file="spectator_cross.png"/>
+   <resource name="spectator rings" file="spectator_rings.png"/>
    <resource name="29 palms" file="29palms.ive"/>
    <resource name="sky dome" file="skydome.ive"/>
    <resource name="m1a1" file="m1a1.ive">

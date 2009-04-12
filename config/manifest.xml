@@ -24,6 +24,7 @@
       </type>
       <type text="Spectator">
          <config file="config/spectator.xml"/>
+         <config file="config/spectator_overlay.xml"/>
          <config file="config/pick.xml"/>
       </type>
    </color>

@@ -4,6 +4,8 @@ local function receive_message (self, message, data)
       local pos = data:lookup_vector ("position", 1)
       if not pos then pos = dmz.vector.new (0, 0, 0) end
 
+self.log:warn (pos)
+
       local event = dmz.event.open_detonation (0, target)
       if event then
          dmz.event.position (event, nil, pos)
