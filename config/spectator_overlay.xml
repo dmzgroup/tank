@@ -20,9 +20,8 @@
    </layout>
    <node type="transform" name="cross">
       <node type="box">
-         <min x="-32.0" y="-32.0"/>
-         <max x="32.0" y="32.0"/>
-         <texture resource="spectator cross"/>
+         <min x="-2.0" y="-2.0"/>
+         <max x="2.0" y="2.0"/>
          <depth value="4"/>
          <color r="0" g="1" b="0" a="0.5"/>
       </node>

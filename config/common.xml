@@ -12,7 +12,7 @@
    <plugin name="dmzObjectModuleBasic"/>
    <plugin name="dmzEventModuleBasic"/>
    <plugin name="dmzEventModuleCommonBasic"/>
-   <!-- <plugin name="dmzPluginMsgDump"/> -->
+   <plugin name="dmzPluginMsgDump"/>
    <!-- <plugin name="dmzObjectPluginDump"/> -->
    <!-- <plugin name="dmzEventPluginDump"/> -->
    <!-- <plugin name="dmzPluginTermExit"/> -->
