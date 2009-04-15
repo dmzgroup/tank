@@ -12,6 +12,10 @@
       <path value="../../assets/tank/sounds"/>
       <path value="./assets/"/>
    </search>
+   <search name="font">
+      <path value="../../assets/tank/fonts"/>
+      <path value="./assets/"/>
+   </search>
    <resource name="DVTE Vehicle">
       <render>
          <articulate>
@@ -20,6 +24,7 @@
          </articulate>
       </render>
    </resource>
+   <resource name="spectator font" file="whitrabt.ttf" path="font"/>
    <resource name="logo" file="DMZ.png"/>
    <resource name="npsnet" file="npsnet_overlay.png"/>
    <resource name="smoke" file="particle.png"/>
