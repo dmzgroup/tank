@@ -1,4 +1,4 @@
 #!/bin/sh
-rm -f ./cyclessetup.exe
+rm -f ./npsnetsetup.exe
 lmk -m opt -b
-../../../depend/InnoSetup5/ISCC.exe cycles.iss
+../../../depend/InnoSetup5/ISCC.exe npsnet.iss
