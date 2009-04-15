@@ -1,0 +1,51 @@
+<dmz>
+<overlay>
+   <color name="help text color" r="0" g="0" b="0"/>
+   <layout node="help transform">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="1.0"/>
+   </layout>
+   <node type="transform" name="help transform">
+      <node type="transform" name="help slider">
+         <position x="0" y="500"/>
+         <node type="text">
+            <text>
+        - Spectator Help -
+
+Right Arrow Key:Turn Right
+ Left Arrow Key:Turn Left
+   Up Arrow Key:Look Up
+ Down Arrow Key:Look Down
+          w Key:Move Forward
+          s Key:Move Backward
+          d Key:Move Right
+          a Key:Move Left
+          q Key:Move Up
+          d Key:Move Down
+          + Key:Increase Hud Radius
+          - Key:Decrease Hud Radius
+          m Key:Create M1
+          t Key:Create T72
+    shift-R Key:Reset Lua Runtime
+    shift-L Key:Open Lua Console
+     Return Key:Start Position
+          ? Key:Help
+        ESC Key:Quit
+            </text>
+            <position x="-180" y="0"/>
+            <font resource="spectator font"/>
+            <height value="20"/>
+            <color name="help text color"/>
+            <depth value="15"/>
+         </node>
+         <node type="box">
+            <min x="-200" y="-500"/>
+            <max x="200" y="0"/>
+            <color r="1" g="1" b="1" a="0.5"/>
+            <depth value="14"/> 
+         </node>
+      </node>
+   </node>
+</overlay>
+</dmz>
+ 
