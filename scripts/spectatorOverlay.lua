@@ -1,3 +1,5 @@
+local HelpSpeed = 800.0
+
 local function update_time_slice (self, time)
 
    local hil = dmz.object.hil ()
@@ -27,7 +29,28 @@ local function update_time_slice (self, time)
 
    dmz.overlay.text (self.mode, self.modeStr .. self.modeName)
    dmz.overlay.text (self.camera, self.cameraStr .. self.cameraName)
+
+   if self.helpActive then
+      local x, y = dmz.overlay.position (self.help)
+      if self.helpState then
+          if y > 0 then y = y - (HelpSpeed * time) end
+          if y <= 0 then
+             y = 0
+             self.helpActive = false
+          end
+      else
+          if y < self.helpOffset then y = y + (HelpSpeed * time) end
+          if y >= self.helpOffset then
+             y = self.helpOffset
+             self.helpActive = false
+          end
+      end
+      dmz.overlay.position (self.help, x, y)
+   end
 end
+
+local QuestionKey = dmz.input.get_key_value ("?")
+local SlashKey = dmz.input.get_key_value ("/")
 
 local function receive_input_event (self, event)
    if event.state then 
@@ -39,6 +62,13 @@ local function receive_input_event (self, event)
       elseif self.active == 0 then
          self.timeSlice:stop (self.handle)
       end
+   elseif event.key then
+      if event.key.value == QuestionKey or event.key.value == SlashKey then
+         if event.key.state then
+            self.helpState =  not self.helpState
+            self.helpActive = true
+         end
+      end
    end
 end
 
@@ -48,7 +78,7 @@ local function start (self)
 
    self.inputObs:init_channels (
       self.config,
-      dmz.input.ChannelState,
+      dmz.input.ChannelState + dmz.input.Key,
       receive_input_event,
       self)
 
@@ -59,6 +89,8 @@ end
 local function stop (self)
    if self.handle and self.timeSlice then self.timeSlice:destroy (self.handle) end
    self.inputObs:release_all ()
+   local x = dmz.overlay.position (self.help)
+   dmz.overlay.position (self.help, x, self.helpOffset)
 end
 
 
@@ -78,6 +110,9 @@ function new (config, name)
       posy = dmz.overlay.lookup_handle ("pos y"),
       posz = dmz.overlay.lookup_handle ("pos z"),
       heading = dmz.overlay.lookup_handle ("heading"),
+      help = dmz.overlay.lookup_handle ("help slider"),
+      helpState = false,
+      helpActive = false,
    }
 
    self.log:info ("Creating plugin: " .. name)
@@ -90,6 +125,8 @@ function new (config, name)
    self.posyStr = "Y:"
    self.poszStr = "Z:"
    self.headingStr = "H:"
+   local x = 0
+   x, self.helpOffset = dmz.overlay.position (self.help)
    
    return self
 end

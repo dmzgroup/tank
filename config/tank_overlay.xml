@@ -20,11 +20,14 @@
    </layout>
    <node type="transform" name="hud">
       <node type="transform" name="hud slider">
-         <node type="box">
-            <min x="-2000" y="0.0"/>
-            <max x="-96" y="64"/>
-            <texture resource="tank hud side"/>
-            <depth value="3"/>
+         <node type="transform" name="hud left side">
+            <position x="-96" y="0"/>
+            <node type="box">
+               <min x="-1" y="0.0"/>
+               <max x="0" y="64"/>
+               <texture resource="tank hud side"/>
+               <depth value="3"/>
+            </node>
          </node>
          <node type="box">
             <min x="-96" y="0.0"/>
@@ -67,11 +70,14 @@
             <texture resource="tank hud right"/>
             <depth value="3"/>
          </node>
-         <node type="box">
-            <min x="96" y="0.0"/>
-            <max x="2000" y="64"/>
-            <texture resource="tank hud side"/>
-            <depth value="3"/>
+         <node type="transform" name="hud right side">
+            <position x="96" y="0"/>
+            <node type="box">
+               <min x="0" y="0.0"/>
+               <max x="1" y="64"/>
+               <texture resource="tank hud side"/>
+               <depth value="3"/>
+            </node>
          </node>
          <node type="box">
             <min x="82" y="14"/>
@@ -147,6 +153,14 @@
       <x type="relative" value="0.5"/>
       <y type="absolute" value="0.0"/>
    </layout>
+   <auto-scale node="hud left side">
+      <x size="1" ratio="0.5" offset="96"/>
+      <y type="fixed"/>
+   </auto-scale>
+   <auto-scale node="hud right side">
+      <x size="1" ratio="0.5" offset="96"/>
+      <y type="fixed"/>
+   </auto-scale>
    <node type="transform" name="dead overlay transform">
       <node type="switch" which="0" name="dead overlay switch">
          <node type="group"/>

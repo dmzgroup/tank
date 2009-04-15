@@ -76,7 +76,6 @@
       <y type="relative" value="0.5"/>
    </layout>
    <node type="transform" name="radar">
-      <scale x="0.5" y="0.5"/>
       <node type="box">
          <min x="0" y="0"/>
          <max x="512" y="512"/>
@@ -115,6 +114,9 @@
       <x type="relative" value="0.5"/>
       <y type="relative" value="0.5"/>
    </layout>
+   <auto-scale node="radar">
+      <y size="1024" ratio="0.9" min="512" max="1024"/>
+   </auto-scale>
    <color name="spectator ring color" r="0" g="1" b="0" a="0.5"/>
    <template name="red dot">
       <node type="switch" name="switch">
