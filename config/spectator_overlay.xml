@@ -5,48 +5,55 @@
 </lua>
 <overlay>
    <color name="text color" r="1.0" g="1.0" b="1.0" a="4.0"/>
-   <node type="transform">
-      <position x="4" y="90"/>
+   <layout node="spectator info">
+      <x type="absolute" value="4"/>
+      <y type="relative" value=".17" min="85" max="172"/>
+   </layout>
+   <auto-scale node="spectator info">
+      <y type="simple" ratio=".2" size="200" min="100" max="200"/>
+   </auto-scale>
+   <node type="transform" name="spectator info">
+      <position x="4" y="180"/>
       <node type="text" name="mode">
          <text value="Mode: "/>
          <position x="0" y="0"/>
          <font resource="spectator font"/>
-         <height value="16"/>
+         <height value="32"/>
          <color name="text color"/>
       </node>
       <node type="text" name="camera">
          <text value="Camera: "/>
-         <position x="0" y="-16"/>
+         <position x="0" y="-32"/>
          <font resource="spectator font"/>
-         <height value="16"/>
+         <height value="32"/>
          <color name="text color"/>
       </node>
       <node type="text" name="pos x">
          <text value="X:"/>
-         <position x="0" y="-32"/>
+         <position x="0" y="-64"/>
          <font resource="spectator font"/>
-         <height value="16"/>
+         <height value="32"/>
          <color name="text color"/>
       </node>
       <node type="text" name="pos y">
          <text value="Y:"/>
-         <position x="0" y="-48"/>
+         <position x="0" y="-96"/>
          <font resource="spectator font"/>
-         <height value="16"/>
+         <height value="32"/>
          <color name="text color"/>
       </node>
       <node type="text" name="pos z">
          <text value="Z:"/>
-         <position x="0" y="-64"/>
+         <position x="0" y="-128"/>
          <font resource="spectator font"/>
-         <height value="16"/>
+         <height value="32"/>
          <color name="text color"/>
       </node>
       <node type="text" name="heading">
          <text value="H:"/>
-         <position x="0" y="-80"/>
+         <position x="0" y="-160"/>
          <font resource="spectator font"/>
-         <height value="16"/>
+         <height value="32"/>
          <color name="text color"/>
       </node>
    </node>

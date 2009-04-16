@@ -14,12 +14,14 @@
          <config file="config/tank.xml"/>
          <config file="config/tank_overlay.xml"/>
          <config file="config/tank_score.xml"/>
+         <config file="config/tank_help.xml"/>
          <config file="config/blue.xml"/>
       </type>
       <type text="Red">
          <config file="config/tank.xml"/>
          <config file="config/tank_overlay.xml"/>
          <config file="config/tank_score.xml"/>
+         <config file="config/tank_help.xml"/>
          <config file="config/red.xml"/>
       </type>
       <type text="Spectator">
