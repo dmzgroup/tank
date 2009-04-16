@@ -10,7 +10,7 @@
          <position x="0" y="500"/>
          <node type="text">
             <text>
-         - Tank Help -
+          - Tank Help -
 
 Right Arrow Key:Turn Turret Right
  Left Arrow Key:Turn Turret Left
@@ -36,7 +36,7 @@ Right Arrow Key:Turn Turret Right
             <depth value="15"/>
          </node>
          <node type="box">
-            <min x="-200" y="-500"/>
+            <min x="-200" y="-400"/>
             <max x="200" y="0"/>
             <color r="1" g="1" b="1" a="0.5"/>
             <depth value="14"/> 
