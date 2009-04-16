@@ -59,6 +59,7 @@ lmk.add_preqs {
    "dmzEntityPluginHide",
    "dmzEntityPluginPortalFollow",
    "dmzEntityPluginTeleport",
+   "dmzEntityPluginRandomizePosition",
    "dmzEntityPluginDamage",
    "dmzEntityPluginDeadTimer",
    "dmzEntityPluginRestoreHealth",
