@@ -14,6 +14,11 @@
    <speed value="1"/>
    <speed value="1341.12"/>
 </cannon>
+<start-position>
+   <center x="-2086.640015" y="-149.8" z="-1007.3"/>
+   <radius value="100.0"/>
+   <heading degrees="210.0"/>
+</start-position>
 <first-person>
    <input>
       <channel name="first-person"/>
@@ -29,19 +34,8 @@
       <attributes>
          <state value="Engine_On"/>
 <!--
-         <position x="1225.424683" y="-210.025421" z="-1530.850098"/>
-         <orientation
-            v0="-0.995458" v1="0.003107" v2="0.095153"
-            v3="-0.000235" v4="0.999384" v5="-0.035090"
-            v6="-0.095204" v7="-0.034953" v8="-0.994844"
-         />
+         NOTE: Position and Orientation are set by EntityPluginRandomizePosition
 -->
-         <position x="-1612.640015" y="-83.860329" z="-3719.739990"/>
-         <orientation
-             v0="-0.995456" v1="-0.003482" v2="0.095162"
-             v3="-0.000970" v4="0.999650" v5="0.026428"
-             v6="-0.095220" v7="0.026216" v8="-0.995111"
-         />
          <velocity x="0.0" y="0.0" z="0.0"/>
          <acceleration x="0.0" y="0.0" z="0.0"/>
       </attributes>

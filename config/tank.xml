@@ -7,13 +7,14 @@
    <plugin name="dmzEntityPluginPortalArticulate" scope="first-person"/>
    <plugin name="dmzEntityPluginHide" scope="first-person"/>
    <plugin name="dmzEntityPluginPortalFollow" scope="third-person"/>
-   <plugin name="dmzEntityPluginTeleport"/>
    <plugin name="dmzEntityPluginDamage" scope="damage"/>
    <plugin name="dmzEntityPluginDeadTimer" scope="damage"/>
    <plugin name="dmzEntityPluginRestoreHealth" scope="damage"/>
    <plugin name="dmzEntityPluginAutoRestoreHealth" scope="restore-health"/>
    <plugin name="dmzEntityPluginOverlayDead"/>
    <plugin name="dmzEntityPluginDustTrail"/>
+   <plugin name="dmzEntityPluginRandomizePosition" scope="start-position"/>
+   <plugin name="dmzEntityPluginTeleport"/>
    <plugin name="dmzWeaponPluginLauncher" scope="cannon"/>
    <plugin name="dmzWeaponPluginGravityBullet" scope="cannon"/>
    <plugin name="dmzObjectPluginTimeout"/>
