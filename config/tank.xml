@@ -34,7 +34,7 @@ the tanks dimensions are different.
 </auto-reload>
 <radar>
    <radius value="58"/>
-   <scale value="0.058"/>
+   <range value="1000"/>
 </radar>
 <tank>
    <component id="3" name="DMZ_Turret_1" rate="2.094" rate-name="DMZ_Turret_1_Rate"/>

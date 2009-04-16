@@ -16,7 +16,7 @@
 </freefly>
 <radar>
    <radius value="512.0"/>
-   <scale value="0.512"/>
+   <range value="1000" min="100.0"/>
 </radar>
 <archive>
    <object type="spectator">

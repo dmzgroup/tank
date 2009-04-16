@@ -75,42 +75,53 @@
       <x type="relative" value="0.5"/>
       <y type="relative" value="0.5"/>
    </layout>
-   <node type="transform" name="radar">
-      <node type="box">
-         <min x="0" y="0"/>
-         <max x="512" y="512"/>
-         <texture resource="spectator rings"/>
-         <color name="spectator ring color"/>
-      </node>
-      <node type="transform">
-         <rotation degrees="90"/>
-         <node type="box">
-            <min x="0" y="0"/>
-            <max x="512" y="512"/>
-            <texture resource="spectator rings"/>
-            <color name="spectator ring color"/>
-         </node>
-      </node>
-      <node type="transform">
-         <rotation degrees="180"/>
-         <node type="box">
-            <min x="0" y="0"/>
-            <max x="512" y="512"/>
-            <texture resource="spectator rings"/>
-            <color name="spectator ring color"/>
-         </node>
-      </node>
-      <node type="transform">
-         <rotation degrees="270"/>
-         <node type="box">
-            <min x="0" y="0"/>
-            <max x="512" y="512"/>
-            <texture resource="spectator rings"/>
-            <color name="spectator ring color"/>
+   <node type="switch" name="radar switch">
+      <node type="transform" name="radar slider">
+         <node type="transform" name="radar">
+            <node type="text" name="radar range">
+               <position x="-22" y="-532"/>
+               <font resource="spectator font"/>
+               <height value="32"/>
+               <color name="spectator ring color"/>
+               <depth value="1"/>
+            </node>
+            <node type="box">
+               <min x="0" y="0"/>
+               <max x="512" y="512"/>
+               <texture resource="spectator rings"/>
+               <color name="spectator ring color"/>
+            </node>
+            <node type="transform">
+               <rotation degrees="90"/>
+               <node type="box">
+                  <min x="0" y="0"/>
+                  <max x="512" y="512"/>
+                  <texture resource="spectator rings"/>
+                  <color name="spectator ring color"/>
+               </node>
+            </node>
+            <node type="transform">
+               <rotation degrees="180"/>
+               <node type="box">
+                  <min x="0" y="0"/>
+                  <max x="512" y="512"/>
+                  <texture resource="spectator rings"/>
+                  <color name="spectator ring color"/>
+               </node>
+            </node>
+            <node type="transform">
+               <rotation degrees="270"/>
+               <node type="box">
+                  <min x="0" y="0"/>
+                  <max x="512" y="512"/>
+                  <texture resource="spectator rings"/>
+                  <color name="spectator ring color"/>
+               </node>
+            </node>
          </node>
       </node>
    </node>
-   <layout node="radar">
+   <layout node="radar slider">
       <x type="relative" value="0.5"/>
       <y type="relative" value="0.5"/>
    </layout>

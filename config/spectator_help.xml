@@ -21,9 +21,11 @@ Right Arrow Key:Turn Right
           d Key:Move Right
           a Key:Move Left
           q Key:Move Up
-          d Key:Move Down
-          + Key:Increase Hud Radius
-          - Key:Decrease Hud Radius
+          z Key:Move Down
+          h Key:Toggle Hud
+          + Key:Increase Hud Range
+          - Key:Decrease Hud Range
+          r Key:Reset Hud Range
           m Key:Create M1
           t Key:Create T72
     shift-R Key:Reset Lua Runtime

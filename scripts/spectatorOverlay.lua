@@ -1,4 +1,5 @@
 local HelpSpeed = 800.0
+local RadarSpeed = 2.0
 
 local function update_time_slice (self, time)
 
@@ -33,24 +34,44 @@ local function update_time_slice (self, time)
    if self.helpActive then
       local x, y = dmz.overlay.position (self.help)
       if self.helpState then
-          if y > 0 then y = y - (HelpSpeed * time) end
-          if y <= 0 then
-             y = 0
-             self.helpActive = false
-          end
+         if y > 0 then y = y - (HelpSpeed * time) end
+         if y <= 0 then
+            y = 0
+            self.helpActive = false
+         end
       else
-          if y < self.helpOffset then y = y + (HelpSpeed * time) end
-          if y >= self.helpOffset then
-             y = self.helpOffset
-             self.helpActive = false
-          end
+         if y < self.helpOffset then y = y + (HelpSpeed * time) end
+         if y >= self.helpOffset then
+            y = self.helpOffset
+            self.helpActive = false
+         end
       end
       dmz.overlay.position (self.help, x, y)
+   end
+
+   if self.radarActive then
+      local x = dmz.overlay.scale (self.radarSlider)
+      if self.radarState then
+         if x < 1.0 then x = x + (RadarSpeed * time) end
+         if x >= 1.0 then
+            x = 1.0
+            self.radarActive = false
+         end
+      else
+         if x > 0.001 then x = x - (RadarSpeed * time) end
+         if x <= 0.001 then
+            x = 0.001
+            self.radarActive = false
+            dmz.overlay.switch_state_all (self.radarSwitch, false)
+         end
+      end
+      dmz.overlay.scale (self.radarSlider, x)
    end
 end
 
 local QuestionKey = dmz.input.get_key_value ("?")
 local SlashKey = dmz.input.get_key_value ("/")
+local HKey = dmz.input.get_key_value ("h")
 
 local function receive_input_event (self, event)
    if event.state then 
@@ -68,6 +89,21 @@ local function receive_input_event (self, event)
             self.helpState =  not self.helpState
             self.helpActive = true
          end
+      elseif event.key.value == HKey and event.key.state then
+         self.radarState = not self.radarState
+         if self.radarState then dmz.overlay.switch_state_all (self.radarSwitch, true) end
+         self.radarActive = true
+      end
+   end
+end
+
+local function update_range (self, mtype, data)
+   if data then
+      local range = data:lookup_number ("DMZ_Overlay_Radar_Range", 1)
+      if range then
+         local rstr = tostring (range)
+         rstr = rstr:sub (rstr:find ("^%-?%d+%.?%d?"))
+         dmz.overlay.text (self.range, tostring (rstr) .. "m")
       end
    end
 end
@@ -102,8 +138,16 @@ function new (config, name)
       log = dmz.log.new ("lua." .. name),
       timeSlice = dmz.time_slice.new (),
       inputObs = dmz.input_observer.new (),
+      msgObs = dmz.message_observer.new (name),
+      rangeMsg =
+         config:to_message ("message.range.name", "DMZ_Overlay_Radar_Range_Message"),
       active = 0,
       config = config,
+      radarSwitch = dmz.overlay.lookup_handle ("radar switch"),
+      radarSlider = dmz.overlay.lookup_handle ("radar slider"),
+      radarState = true,
+      radarActive = false,
+      range = dmz.overlay.lookup_handle ("radar range"),
       mode = dmz.overlay.lookup_handle ("mode"),
       camera = dmz.overlay.lookup_handle ("camera"),
       posx = dmz.overlay.lookup_handle ("pos x"),
@@ -114,6 +158,8 @@ function new (config, name)
       helpState = false,
       helpActive = false,
    }
+
+   self.msgObs:register (self.rangeMsg, update_range, self)
 
    self.log:info ("Creating plugin: " .. name)
 
