@@ -1,7 +1,7 @@
 #define BuildMode "opt"
 #define AppName "npsnet"
 #define AppVerName "npsnet 1.0"
-#define Publisher "CHDS"
+#define Publisher "DMZ Group"
 #define AppURL "http://dmzdev.org"
 #define AppExeName "npsnet.exe"
 #define DependDir "..\..\..\depend"
@@ -72,6 +72,7 @@ Source: {#DependDir}\bin\zlib1.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\osgplugins-2.8.0\osgdb_png.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\osgplugins-2.8.0\osgdb_ive.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\osgplugins-2.8.0\osgdb_osgfx.dll; DestDir: {app}\bin
+Source: {#DependDir}\bin\osgplugins-2.8.0\osgdb_freetype.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\fmodex.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\fmodexL.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\fmodexp.dll; DestDir: {app}\bin
