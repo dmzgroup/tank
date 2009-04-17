@@ -29,6 +29,7 @@ cp $DEPTH/depend/osg/lib/libosgFX.dylib $OSGDIR
 cp $DEPTH/depend/osg/lib/osgdb_qt.so $OSGPLUGINDIR
 cp $DEPTH/depend/osg/lib/osgdb_ive.so $OSGPLUGINDIR
 cp $DEPTH/depend/osg/lib/osgdb_osgsim.so $OSGPLUGINDIR
+cp $DEPTH/depend/osg/lib/osgdb_freetype.so $OSGPLUGINDIR
 hdiutil create -srcfolder $DEPTH/npsnet.app $DEPTH/npsnet-`cat $DEPTH/tmp/macos-opt/mbraapp/buildnumber.txt`.dmg
 hdiutil internet-enable -yes -verbose $DEPTH/npsnet-`cat $DEPTH/tmp/macos-opt/mbraapp/buildnumber.txt`.dmg
 rm -rf $DEPTH/npsnet.app/
