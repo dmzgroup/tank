@@ -25,7 +25,6 @@
       </render>
    </resource>
    <resource name="spectator font" file="data-latin.ttf" path="font"/>
-   <resource name="logo" file="DMZ.png"/>
    <resource name="npsnet" file="npsnet_overlay.png"/>
    <resource name="smoke" file="particle.png"/>
    <resource name="fire" file="particle.png"/>
