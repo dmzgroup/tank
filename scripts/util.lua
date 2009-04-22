@@ -38,11 +38,11 @@ end
 local MKey = dmz.input.get_key_value ("m")
 local TKey = dmz.input.get_key_value ("t")
 
-local function receive_input_event (self, event)
-   if event.key and event.key.state then
-      if MKey == event.key.value then
+local function receive_key_event (self, channel, key)
+   if key.state then
+      if MKey == key.value then
          create_tank (self, "m1a1-timeout")
-      elseif TKey == event.key.value then
+      elseif TKey == key.value then
          create_tank (self, "t72m-timeout")
       end
    end
@@ -64,10 +64,9 @@ local function close_event (self, EventHandle)
 end
 
 local function start (self)
-   self.inputObs:init_channels (
-      self.config,
-      dmz.input.Key,
-      receive_input_event,
+   self.inputObs:register (
+      nil,
+      { receive_key_event = receive_key_event, },
       self);
    self.eventObs:register ("Event_Detonation", {close_event = close_event}, self)
 end

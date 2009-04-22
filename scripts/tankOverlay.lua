@@ -32,20 +32,18 @@ local function update_time_slice (self, time)
    end
 end
 
-local function receive_input_event (self, event)
-   if event.state then 
-      if event.state.active then  self.active = self.active + 1
-      else self.active = self.active - 1 end
+local function update_channel_state (self, channel, state)
+   if state then  self.active = self.active + 1
+   else self.active = self.active - 1 end
 
-      if self.active == 1 then
-         self.timeSlice:start (self.handle)
-         if self.top then
-            dmz.overlay.enable_switch_state_single (self.top, 0)
-         end
-      elseif self.active == 0 then
-         self.timeSlice:stop (self.handle)
-         dmz.overlay.switch_state_all (self.top, false)
+   if self.active == 1 then
+      self.timeSlice:start (self.handle)
+      if self.top then
+         dmz.overlay.enable_switch_state_single (self.top, 0)
       end
+   elseif self.active == 0 then
+      self.timeSlice:stop (self.handle)
+      dmz.overlay.switch_state_all (self.top, false)
    end
 end
 
@@ -59,10 +57,9 @@ end
 local function start (self)
    self.handle = self.timeSlice:create (update_time_slice, self, self.name)
 
-   self.inputObs:init_channels (
-      self.config,
-      dmz.input.ChannelState,
-      receive_input_event,
+   self.inputObs:register (
+      "first-person",
+      { update_channel_state = update_channel_state, },
       self)
 
    self.objObs:register ("DMZ_Turret_1", {update_object_scalar = update_scalar}, self)

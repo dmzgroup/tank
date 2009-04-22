@@ -69,31 +69,31 @@ local function update_time_slice (self, time)
    end
 end
 
+local function update_channel_state (self, channel, state)
+   if state then  self.active = self.active + 1
+   else self.active = self.active - 1 end
+
+   if self.active == 1 then
+      self.timeSlice:start (self.handle)
+   elseif self.active == 0 then
+      self.timeSlice:stop (self.handle)
+   end
+end
+
 local QuestionKey = dmz.input.get_key_value ("?")
 local SlashKey = dmz.input.get_key_value ("/")
 local HKey = dmz.input.get_key_value ("h")
 
-local function receive_input_event (self, event)
-   if event.state then 
-      if event.state.active then  self.active = self.active + 1
-      else self.active = self.active - 1 end
-
-      if self.active == 1 then
-         self.timeSlice:start (self.handle)
-      elseif self.active == 0 then
-         self.timeSlice:stop (self.handle)
+local function receive_key_event (self, channel, key)
+   if key.value == QuestionKey or key.value == SlashKey then
+      if key.state then
+         self.helpState =  not self.helpState
+         self.helpActive = true
       end
-   elseif event.key then
-      if event.key.value == QuestionKey or event.key.value == SlashKey then
-         if event.key.state then
-            self.helpState =  not self.helpState
-            self.helpActive = true
-         end
-      elseif event.key.value == HKey and event.key.state then
-         self.radarState = not self.radarState
-         if self.radarState then dmz.overlay.switch_state_all (self.radarSwitch, true) end
-         self.radarActive = true
-      end
+   elseif key.value == HKey and key.state then
+      self.radarState = not self.radarState
+      if self.radarState then dmz.overlay.switch_state_all (self.radarSwitch, true) end
+      self.radarActive = true
    end
 end
 
@@ -112,10 +112,12 @@ end
 local function start (self)
    self.handle = self.timeSlice:create (update_time_slice, self, self.name)
 
-   self.inputObs:init_channels (
-      self.config,
-      dmz.input.ChannelState + dmz.input.Key,
-      receive_input_event,
+   self.inputObs:register (
+      nil,
+      {
+         update_channel_state = update_channel_state,
+         receive_key_event = receive_key_event,
+      },
       self)
 
    if self.handle and self.active == 0 then self.timeSlice:stop (self.handle) end
