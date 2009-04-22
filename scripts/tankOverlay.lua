@@ -58,7 +58,7 @@ local function start (self)
    self.handle = self.timeSlice:create (update_time_slice, self, self.name)
 
    self.inputObs:register (
-      "first-person",
+      self.config,
       { update_channel_state = update_channel_state, },
       self)
 

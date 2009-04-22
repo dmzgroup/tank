@@ -65,7 +65,7 @@ end
 
 local function start (self)
    self.inputObs:register (
-      nil,
+      self.config,
       { receive_key_event = receive_key_event, },
       self);
    self.eventObs:register ("Event_Detonation", {close_event = close_event}, self)
