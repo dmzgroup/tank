@@ -10,24 +10,26 @@
          <position x="0" y="500"/>
          <node type="text">
             <text>
-          - Tank Help -
+           - Tank Help -
 
-Right Arrow Key:Turn Turret Right
- Left Arrow Key:Turn Turret Left
-   Up Arrow Key:Raise Cannon
- Down Arrow Key:Lower Cannon
-          w Key:Accelerator
-          s Key:Break
-          d Key:Turn Right
-          a Key:Turn Left
-          r Key:Reset Turret
-          m Key:Create M1
-          t Key:Create T72
-    shift-R Key:Reset Lua Runtime
-    shift-L Key:Open Lua Console
-     Return Key:Start Position
-          ? Key:Help
-        ESC Key:Quit
+ Right Arrow Key:Turn Turret Right
+  Left Arrow Key:Turn Turret Left
+    Up Arrow Key:Raise Cannon
+  Down Arrow Key:Lower Cannon
+           w Key:Accelerator
+           s Key:Break
+           d Key:Turn Right
+           a Key:Turn Left
+           r Key:Reset Turret
+       space Key:Fire
+       comma Key:Toggle Display
+           m Key:Create M1
+           t Key:Create T72
+     shift-R Key:Reset Lua Runtime
+     shift-L Key:Open Lua Console
+      Return Key:Start Position
+           ? Key:Toggle Help
+         ESC Key:Quit
             </text>
             <position x="-180" y="0"/>
             <font resource="spectator font"/>
@@ -36,7 +38,7 @@ Right Arrow Key:Turn Turret Right
             <depth value="15"/>
          </node>
          <node type="box">
-            <min x="-200" y="-400"/>
+            <min x="-200" y="-420"/>
             <max x="200" y="0"/>
             <color r="1" g="1" b="1" a="0.5"/>
             <depth value="14"/> 
