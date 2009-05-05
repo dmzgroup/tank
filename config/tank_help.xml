@@ -21,12 +21,13 @@
            d Key:Turn Right
            a Key:Turn Left
            r Key:Reset Turret
-       space Key:Fire
-       comma Key:Toggle Display
+       Space Key:Fire
+       Comma Key:Toggle Display
            m Key:Create M1
            t Key:Create T72
-     shift-R Key:Reset Lua Runtime
-     shift-L Key:Open Lua Console
+         Tab Key:Toggle View
+     Shift-R Key:Reset Lua Runtime
+     Shift-L Key:Open Lua Console
       Return Key:Start Position
            ? Key:Toggle Help
          ESC Key:Quit
@@ -38,7 +39,7 @@
             <depth value="15"/>
          </node>
          <node type="box">
-            <min x="-200" y="-420"/>
+            <min x="-200" y="-440"/>
             <max x="200" y="0"/>
             <color r="1" g="1" b="1" a="0.5"/>
             <depth value="14"/> 
