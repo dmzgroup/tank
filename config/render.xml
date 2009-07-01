@@ -24,12 +24,13 @@
    </plugin-list>
    <viewer>
       <window-title value="NPSNET: Dueling Tanks"/>
+      <aa samples="4"/>
    </viewer>
    <visibility fov="60.0" near="1.0" far="32000.0"/>
    <light value="0">
-      <position x="0" y="50000" z="0"/>
-      <direction x="-1.0" y="-1.0" z="-1.0"/>
-      <ambient r="0.5" g="0.5" b="0.5"/>
+      <position x="1000" y="5000" z="100"/>
+      <direction x="-0.5" y="-1.0" z="-0.5"/>
+      <ambient r="0.1" g="0.1" b="0.1"/>
       <specular r="0.2" g="0.2" b="0.2"/>
       <diffuse r="0.9" g="0.9" b="0.9"/>
    </light>
