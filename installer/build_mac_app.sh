@@ -9,11 +9,8 @@ cp $DEPTH/depend/Qt/QtXml $DEPTH/npsnet.app/Contents/Frameworks/Qt
 cp $DEPTH/depend/Qt/QtSvg $DEPTH/npsnet.app/Contents/Frameworks/Qt
 cp $DEPTH/depend/Qt/QtOpenGL $DEPTH/npsnet.app/Contents/Frameworks/Qt
 OSGDIR=$DEPTH/npsnet.app/Contents/Frameworks/osg
-OSGPLUGINDIRPRE=$DEPTH/npsnet.app/Contents/PlugIns/
-OSGPLUGINDIR=$DEPTH/npsnet.app/Contents/PlugIns/osgPlugins-2.8.0
-#OSGPLUGINDIR=$OSGDIR/osgPlugins-2.6.1
+OSGPLUGINDIR=$DEPTH/npsnet.app/Contents/PlugIns/
 mkdir $OSGDIR
-mkdir $OSGPLUGINDIRPRE
 mkdir $OSGPLUGINDIR
 cp $DEPTH/depend/osg/lib/libosg.dylib $OSGDIR
 cp $DEPTH/depend/osg/lib/libosgSim.dylib $OSGDIR
