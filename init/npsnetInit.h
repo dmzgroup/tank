@@ -2,12 +2,12 @@
 #define NPSNET_INIT_DOT_H
 
 #include <dmzAppShellExt.h>
-#include <QtGui/QWidget>
+#include <QtGui/QDialog>
 #include <ui_npsnetInit.h>
 
 namespace dmz {
 
-class NPSNetInit : public QWidget {
+class NPSNetInit : public QDialog {
 
    Q_OBJECT
 
