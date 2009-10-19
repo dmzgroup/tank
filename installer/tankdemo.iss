@@ -1,9 +1,9 @@
 #define BuildMode "opt"
-#define AppName "npsnet"
-#define AppVerName "npsnet 1.0"
+#define AppName "tankdemo"
+#define AppVerName "tankdemo 1.0"
 #define Publisher "DMZ Group"
 #define AppURL "http://dmzdev.org"
-#define AppExeName "npsnet.exe"
+#define AppExeName "tankdemo.exe"
 #define DependDir "..\..\..\depend"
 #define VsDir "c:\Program Files\Microsoft Visual Studio 8"
 
@@ -22,7 +22,7 @@ UninstallDisplayName={#AppName}
 UninstallDisplayIcon={app}\bin\{#AppExeName}
 UninstallFilesDir={app}\uninst
 OutputDir=.
-OutputBaseFilename=npsnetsetup
+OutputBaseFilename=tankdemosetup
 ;OutputManifestFile=manifest.txt
 ;WizardImageFile=WizImage.bmp
 ;WizardSmallImageFile=WizSmallImage.bmp
@@ -48,10 +48,10 @@ Filename: {app}\bin\{#AppExeName}; Description: {cm:LaunchProgram,{#AppName}}; F
 
 [Registry]
 Root: HKLM; Subkey: Software\DMZ\{#AppName}; ValueType: string; ValueName: workingDir; ValueData: {app}; Flags: uninsdeletekey
-Root: HKCR; Subkey: npsnet.file\shell\open\command; ValueType: string; ValueData: "{app}\bin\npsnet.exe ""%1"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: tankdemo.file\shell\open\command; ValueType: string; ValueData: "{app}\bin\tankdemo.exe ""%1"""; Flags: uninsdeletekey
 
 [Files]
-Source: ..\..\..\bin\win32-{#BuildMode}\npsnet.app\*; DestDir: {app}; Flags: recursesubdirs
+Source: ..\..\..\bin\win32-{#BuildMode}\tankdemo.app\*; DestDir: {app}; Flags: recursesubdirs
 Source: {#DependDir}\bin\QtCore4.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\QtGui4.dll; DestDir: {app}\bin
 Source: {#DependDir}\bin\QtOpenGL4.dll; DestDir: {app}\bin

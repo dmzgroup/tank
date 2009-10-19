@@ -8,7 +8,7 @@
 <lua>
    <time value="0.5"/>
    <path value="./scripts/?.lua"/>
-   <extensions>
+   <plugin-list>
       <plugin name="dmzLuaExtInput"/>
       <plugin name="dmzLuaExtIsect"/>
       <plugin name="dmzLuaExtObject"/>
@@ -16,7 +16,7 @@
       <plugin name="dmzLuaExtOverlay"/>
       <plugin name="dmzLuaExtPortal"/>
       <plugin name="dmzQtExtLuaConsole"/>
-   </extensions>
+   </plugin-list>
    <instance name="util"/>
    <instance name="detonate"/>
    <instance name="barham"/>

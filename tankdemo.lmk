@@ -1,0 +1,4 @@
+require "qtshell"
+
+qtshell.set_up ("tankdemo")
+lmk.add_files ({"tankdemo.rc"},{win32 = true})

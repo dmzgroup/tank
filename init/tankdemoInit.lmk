@@ -1,6 +1,6 @@
 require "lmkQt"
 
-lmkQt.set_name "npsnetInit"
+lmkQt.set_name "tankdemoInit"
 lmk.set_type "plugin"
 lmk.add_files {"npsnetInit.qrc",}
 lmk.add_files {"npsnetInit.ui",}

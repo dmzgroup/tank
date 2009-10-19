@@ -221,7 +221,7 @@ NPSNetInit::closeEvent (QCloseEvent * event) {
 extern "C" {
 
 DMZ_PLUGIN_FACTORY_LINK_SYMBOL void
-dmz_init_npsnet (AppShellInitStruct &init) {
+dmz_init_tankdemo (AppShellInitStruct &init) {
 
    NPSNetInit ci (init);
 

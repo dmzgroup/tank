@@ -1,4 +1,4 @@
 #!/bin/sh
-rm -f ./npsnetsetup.exe
+rm -f ./tankdemosetup.exe
 lmk -m opt -b
-../../../depend/InnoSetup5/ISCC.exe npsnet.iss
+../../../depend/InnoSetup5/ISCC.exe tankdemo.iss

@@ -1,0 +1,41 @@
+require "app"
+lmk.set_name ("tankdemoapp")
+lmk.add_vars {
+   appName = "tankdemo",
+   majorVersion = "1",
+   minorVersion = "0",
+   bugVersion = "0",
+   releaseType = "test 5",
+   --aboutImage = "./assets/DMZ-Icon.png",
+}
+lmk.add_files ({"version.xml",}, {src="version",})
+lmk.add_files {"tankdemo.app"}
+lmk.add_preqs ({"dmzAudioModuleOpenAL",}, { macos = true })
+lmk.add_preqs ({"dmzAudioModuleFMOD",}, { win32 = true })
+lmk.add_preqs {"tankdemo", "tankdemoInit",}
+app.build_preqs {"config",}
+app.set_app ("tankdemo")
+app.set_plist ("Info.plist")
+app.add_icons {"AppIcon.icns"}
+app.add_config {
+   "config/",
+   "$(localTmpDir)/version.xml",
+}
+app.add_data {
+   "assets/DMZ-Splash.png",
+   "../../assets/tank",
+}
+app.add_scripts {
+   "../dmz/scripts/entity/dmzEntityPluginFreeFly.lua",
+   "scripts/",
+}
+lmk.add_vars ({
+   installPaths = {
+      {"QtCore.framework/Versions/4/QtCore", "@executable_path/../Frameworks/Qt/QtCore"},
+      {"QtGui.framework/Versions/4/QtGui", "@executable_path/../Frameworks/Qt/QtGui"},
+      {"QtXml.framework/Versions/4/QtXml", "@executable_path/../Frameworks/Qt/QtXml"},
+      {"QtSvg.framework/Versions/4/QtSvg", "@executable_path/../Frameworks/Qt/QtSvg"},
+      {"QtOpenGL.framework/Versions/4/QtOpenGL", "@executable_path/../Frameworks/Qt/QtOpenGL"},
+   },
+}
+,{opt = true})

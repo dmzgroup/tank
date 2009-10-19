@@ -1,15 +1,15 @@
 #!/bin/sh
 DEPTH=../../..
 lmk -m opt -b
-cp -RL $DEPTH/bin/macos-opt/npsnet.app $DEPTH
-mkdir $DEPTH/npsnet.app/Contents/Frameworks/Qt
-cp $DEPTH/depend/Qt/QtCore $DEPTH/npsnet.app/Contents/Frameworks/Qt
-cp $DEPTH/depend/Qt/QtGui $DEPTH/npsnet.app/Contents/Frameworks/Qt
-cp $DEPTH/depend/Qt/QtXml $DEPTH/npsnet.app/Contents/Frameworks/Qt
-cp $DEPTH/depend/Qt/QtSvg $DEPTH/npsnet.app/Contents/Frameworks/Qt
-cp $DEPTH/depend/Qt/QtOpenGL $DEPTH/npsnet.app/Contents/Frameworks/Qt
-OSGDIR=$DEPTH/npsnet.app/Contents/Frameworks/osg
-OSGPLUGINDIR=$DEPTH/npsnet.app/Contents/PlugIns/
+cp -RL $DEPTH/bin/macos-opt/tankdemo.app $DEPTH
+mkdir $DEPTH/tankdemo.app/Contents/Frameworks/Qt
+cp $DEPTH/depend/Qt/QtCore $DEPTH/tankdemo.app/Contents/Frameworks/Qt
+cp $DEPTH/depend/Qt/QtGui $DEPTH/tankdemo.app/Contents/Frameworks/Qt
+cp $DEPTH/depend/Qt/QtXml $DEPTH/tankdemo.app/Contents/Frameworks/Qt
+cp $DEPTH/depend/Qt/QtSvg $DEPTH/tankdemo.app/Contents/Frameworks/Qt
+cp $DEPTH/depend/Qt/QtOpenGL $DEPTH/tankdemo.app/Contents/Frameworks/Qt
+OSGDIR=$DEPTH/tankdemo.app/Contents/Frameworks/osg
+OSGPLUGINDIR=$DEPTH/tankdemo.app/Contents/PlugIns/
 mkdir $OSGDIR
 mkdir $OSGPLUGINDIR
 cp $DEPTH/depend/osg/lib/libosg.dylib $OSGDIR
@@ -27,6 +27,6 @@ cp $DEPTH/depend/osg/lib/osgdb_qt.so $OSGPLUGINDIR
 cp $DEPTH/depend/osg/lib/osgdb_ive.so $OSGPLUGINDIR
 cp $DEPTH/depend/osg/lib/osgdb_osgsim.so $OSGPLUGINDIR
 cp $DEPTH/depend/osg/lib/osgdb_freetype.so $OSGPLUGINDIR
-hdiutil create -srcfolder $DEPTH/npsnet.app $DEPTH/npsnet-`cat $DEPTH/tmp/macos-opt/mbraapp/buildnumber.txt`.dmg
-hdiutil internet-enable -yes -verbose $DEPTH/npsnet-`cat $DEPTH/tmp/macos-opt/mbraapp/buildnumber.txt`.dmg
-rm -rf $DEPTH/npsnet.app/
+hdiutil create -srcfolder $DEPTH/tankdemo.app $DEPTH/tankdemo-`cat $DEPTH/tmp/macos-opt/mbraapp/buildnumber.txt`.dmg
+hdiutil internet-enable -yes -verbose $DEPTH/tankdemo-`cat $DEPTH/tmp/macos-opt/mbraapp/buildnumber.txt`.dmg
+rm -rf $DEPTH/tankdemo.app/
