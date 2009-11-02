@@ -5,6 +5,7 @@
    <plugin name="dmzRenderModulePortalOSG" scope="render"/>
    <plugin name="dmzRenderPluginStaticTerrainOSG" scope="terrain"/>
    <plugin name="dmzRenderPluginObjectOSG"/>
+   <plugin name="dmzRenderPluginHighlightOSG" scope="render"/>
    <plugin name="dmzRenderPluginParticleEffectsOSG"/>
    <plugin name="dmzRenderPluginArticulateOSG"/>
    <plugin name="dmzRenderPluginDisableObjectIsect"/>
@@ -34,6 +35,12 @@
       <specular r="0.2" g="0.2" b="0.2"/>
       <diffuse r="0.9" g="0.9" b="0.9"/>
    </light>
+   <highlight attribute="Object_Select_Attribute">
+      <emission r="1" g="1" b="1" a="0"/>
+   </highlight>
+   <highlight attribute="Object_Highlight_Attribute">
+      <emission r="1" g="1" b="0" a="0"/>
+   </highlight>
 </render>
 <terrain>
    <model resource="29 palms"/>

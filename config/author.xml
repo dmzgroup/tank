@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+<plugin-list>
+   <plugin name="dmzObjectModuleSelectBasic"/>
+   <plugin name="dmzRenderModulePickBasic"/>
+   <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="select-event"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="mouse-move-event"/>
+</plugin-list>
+<lua>
+   <instance name="SelectObject"/>
+   <instance name="HighlightObject"/>
+</lua>
+<select-event>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+   </input>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="position"
+               action="released"
+               message="SelectEvent"
+               next="first"
+         >
+            <attribute type="object" name="object"/>
+         </condition>
+      </state>
+   </converter>
+</select-event>
+<mouse-move-event>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+   </input>
+   <target name="HighlightObject"/>
+   <converter type="2D" start="first">
+      <state name="first" type="basic">
+         <condition
+               action="moved"
+               result="position"
+               next="first"
+               message="MouseMoveEvent">
+            <attribute type="position" name="position"/>
+            <attribute type="object" name="object"/>
+         </condition>
+      </state>
+   </converter>
+</mouse-move-event>
+<pick>
+   <source name="DMZ_Render_Main_Portal"/>
+</pick>
+</dmz>
