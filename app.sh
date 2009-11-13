@@ -2,5 +2,5 @@
 
 . ../scripts/envsetup.sh
 
-#export CYCLES_LOG=true
-$RUN_DEBUG$BIN_HOME/npsnet
+#export TANKDEMO_LOG=true
+$RUN_DEBUG$BIN_HOME/tankdemo

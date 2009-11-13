@@ -21,7 +21,7 @@
 <archive>
    <object type="spectator">
       <attributes>
-         <position x="-1835.868164" y="-140.961929" z="-585.744690"/>
+         <position x="15" y="-120" z="30"/>
          <orientation
             v0="1.0" v1="0.0" v2="0.0"
             v3="0.0" v4="1.0" v5="0.0"

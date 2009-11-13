@@ -7,15 +7,15 @@
    <!-- fire rate one round every six second for m1a1 -->
    <!-- <delay value="6"/> -->
    <transform>
-      <component z="0.77"/>
-      <component name="DMZ_Turret_1" axis="y" y="1.62" z="-2.3"/>
-      <component name="DMZ_Gun_1" axis="x" z="-3.8"/>
+      <component z="0.4"/>
+      <component name="DMZ_Turret_1" axis="y" y="1.65" z="-2.3"/>
+      <component name="DMZ_Gun_1" axis="x" z="-3.9"/>
    </transform>
    <speed value="1"/>
    <speed value="1341.12"/>
 </cannon>
 <start-position>
-   <center x="-1858.4" y="-147.6" z="-613.0"/>
+   <center x="15" y="-130" z="30"/>
    <radius value="100"/>
    <heading degrees="30"/>
 </start-position>
@@ -24,8 +24,8 @@
       <channel name="first-person"/>
    </input>
    <transform>
-      <component z="0.77"/>
-      <component name="DMZ_Turret_1" axis="y" y="1.62" z="-2.3"/>
+      <component z="0.4"/>
+      <component name="DMZ_Turret_1" axis="y" y="1.65" z="-2.3"/>
       <component name="DMZ_Gun_1" axis="x"/>
    </transform>
 </first-person>
