@@ -20,6 +20,7 @@
    <plugin name="dmzRenderModuleCoreOSGBasic" scope="render" platform="linux" unload="false"/>
 </plugin-list>
 <render>
+   <osg-up value="z"/>
    <plugin-list>
       <plugin name="dmzRenderExtViewerOSG" scope="viewer"/>
    </plugin-list>
