@@ -12,13 +12,15 @@
    <plugin name="dmzObjectModuleBasic"/>
    <plugin name="dmzEventModuleBasic"/>
    <plugin name="dmzEventModuleCommonBasic"/>
-   
-   <!-- <plugin name="dmzQtPluginObjectInspector" unique="object-inspector"/> -->
-   <!-- <plugin name="dmzPluginMsgDump"/> -->
-   <!-- <plugin name="dmzObjectPluginDump"/> -->
-   <!-- <plugin name="dmzEventPluginDump"/> -->
-   <!-- <plugin name="dmzPluginTermExit"/> -->
-   <!-- <plugin name="dmzRenderPluginPortalSize"/> -->
+<!--
+   <plugin name="dmzQtPluginObjectInspector" unique="object-inspector"/>
+   <plugin name="dmzPluginDefinitionsDump"/>
+   <plugin name="dmzPluginMsgDump"/>
+   <plugin name="dmzObjectPluginDump"/>
+   <plugin name="dmzEventPluginDump"/>
+   <plugin name="dmzPluginTermExit"/>
+   <plugin name="dmzRenderPluginPortalSize"/>
+-->
 </plugin-list>
 <dmzArchivePluginObject>
    <archive>

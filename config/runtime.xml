@@ -59,18 +59,21 @@
          <state name="Dust_Trail" mask="0x004"/>
          <state name="Smoking" mask="0x008"/>
          <state name="Fire" mask="0x010"/>
-         <rule type="scalar" attribute="DMZ_Gun_1"/>
-         <rule type="scalar" attribute="DMZ_Turret_1"/>
-         <rule type="scalar" attribute="throttle"/>
-         <rule type="state"/>
-         <rule type="velocity"/>
-         <rule type="orientation"/>
-         <rule type="skew"/>
-         <rule type="position"/>
-         <rule type="rate-limit"/>
-         <rule type="zero-velocity"/>
-         <rule type="scalar" attribute="DMZ_Turret_1_Rate"/>
          <rule type="heartbeat" value="1.0"/>
+         <rule type="scalar" attribute="DMZ_Turret_1_Rate"/>
+         <rule type="scalar" attribute="DMZ_Gun_1_Rate"/>
+         <rule type="zero-velocity"/>
+         <rule type="rate-limit"/>
+         <rule type="position"/>
+<!--
+         <rule type="skew"/>
+-->
+         <rule type="orientation"/>
+         <rule type="velocity"/>
+         <rule type="state"/>
+         <rule type="scalar" attribute="throttle"/>
+         <rule type="scalar" attribute="DMZ_Turret_1" value="0.4488"/>
+         <rule type="scalar" attribute="DMZ_Gun_1" value="0.4488"/>
       </net>
       <render>
          <particle-effect type="smoking"/>
