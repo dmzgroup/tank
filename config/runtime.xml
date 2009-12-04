@@ -64,10 +64,7 @@
          <rule type="scalar" attribute="DMZ_Gun_1_Rate"/>
          <rule type="zero-velocity"/>
          <rule type="rate-limit"/>
-         <rule type="position"/>
-<!--
-         <rule type="skew"/>
--->
+         <rule type="position" value="10.0"/>
          <rule type="orientation"/>
          <rule type="velocity"/>
          <rule type="state"/>
