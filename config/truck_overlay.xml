@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<lua>
+   <instance name="tankOverlay" scope="first-person"/>
+   <instance name="tankHit"/>
+   <instance name="tankScore"/>
+</lua>
+<overlay>
+   <node type="transform" name="logo">
+      <node type="box">
+         <min x="-128.0" y="-67.0"/>
+         <max x="128.0" y="-3.0"/>
+         <texture resource="npsnet"/>
+         <depth value="4"/>
+         <color r="1" g="1" b="1" a="0.25"/>
+      </node>
+   </node>
+   <layout node="logo">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="1.0"/>
+   </layout>
+   <node type="transform" name="hud">
+      <node type="transform" name="hud slider">
+         <node type="transform" name="hud left side">
+            <position x="-96" y="0"/>
+            <node type="box">
+               <min x="-1" y="0.0"/>
+               <max x="0" y="64"/>
+               <texture resource="tank hud side"/>
+               <depth value="3"/>
+            </node>
+         </node>
+         <node type="box">
+            <min x="-96" y="0.0"/>
+            <max x="-64" y="128"/>
+            <texture resource="tank hud left"/>
+            <depth value="3"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="0.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map"/>
+            <depth value="4"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="0.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map rings"/>
+            <depth value="3"/>
+            <color r="0" g="0.75" b="0"/>
+         </node>
+         <node type="transform">
+            <position x="0" y="64"/>
+            <node type="transform" name="radar"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="0.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map back"/>
+            <depth value="1"/>
+         </node>
+         <node type="box">
+            <min x="-64" y="64.0"/>
+            <max x="64" y="128"/>
+            <texture resource="tank hud map glare"/>
+            <depth value="5"/>
+         </node>
+         <node type="box">
+            <min x="64" y="0.0"/>
+            <max x="96" y="128"/>
+            <texture resource="tank hud right"/>
+            <depth value="3"/>
+         </node>
+         <node type="transform" name="hud right side">
+            <position x="96" y="0"/>
+            <node type="box">
+               <min x="0" y="0.0"/>
+               <max x="1" y="64"/>
+               <texture resource="tank hud side"/>
+               <depth value="3"/>
+            </node>
+         </node>
+         <node type="box">
+            <min x="-338" y="14"/>
+            <max x="-82" y="46"/>
+            <texture resource="tank hud display"/>
+            <depth value="4"/>
+         </node>
+         <node type="box">
+            <min x="-298" y="22"/>
+            <max x="-170" y="38"/>
+            <texture resource="tank health"/>
+            <color name="digit color"/>
+            <depth value="5"/>
+         </node>
+         <node type="transform" name="display health">
+            <position x="-170" y="22"/>
+            <node type="transform">
+               <position x="0" y="0"/>
+               <node type="clone" name="health digit3" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="16" y="0"/>
+               <node type="clone" name="health digit2" template="digit"/>
+            </node>
+            <node type="transform">
+               <position x="32" y="0"/>
+               <node type="clone" name="health digit1" template="digit"/>
+            </node>
+         </node>
+         <node type="box">
+            <min x="-338" y="14"/>
+            <max x="-82" y="46"/>
+            <texture resource="tank hud display glare"/>
+            <depth value="6"/>
+         </node>
+      </node>
+   </node>
+   <layout node="hud">
+      <x type="relative" value="0.5"/>
+      <y type="absolute" value="0.0"/>
+   </layout>
+   <auto-scale node="hud left side">
+      <x size="1" ratio="0.5" offset="96"/>
+      <y type="fixed"/>
+   </auto-scale>
+   <auto-scale node="hud right side">
+      <x size="1" ratio="0.5" offset="96"/>
+      <y type="fixed"/>
+   </auto-scale>
+   <node type="transform" name="dead overlay transform">
+      <node type="switch" which="0" name="dead overlay switch">
+         <node type="group"/>
+         <node type="box">
+            <min x="-0.5" y="-0.5"/>
+            <max x="0.5" y="0.5"/>
+            <color r="1" g="0" b="0" a="0.5"/>
+            <depth value="16"/>
+         </node>
+      </node>
+   </node>
+   <node type="switch" which="-1" name="hit left overlay switch">
+      <node type="transform" name="hit left overlay layout transform">
+         <rotation value="3.141592653589793"/>
+         <node type="transform" name="hit left overlay slider">
+            <position x="200"/>
+            <node type="box">
+               <min x="-200" y="-1500"/>
+               <max x="0" y="1500"/>
+               <color r="1" g="0" b="0" a="0.5"/>
+               <depth value="-1"/>
+               <texture resource="gradient"/>
+            </node>
+         </node>
+      </node>
+   </node>
+   <layout node="hit left overlay layout transform">
+      <x type="absolute" value="0.0"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <node type="switch" which="-1" name="hit right overlay switch">
+      <node type="transform" name="hit right overlay layout transform">
+         <node type="transform" name="hit right overlay slider">
+            <position x="200"/>
+            <node type="box">
+               <min x="-200" y="-1500"/>
+               <max x="0" y="1500"/>
+               <color r="1" g="0" b="0" a="0.5"/>
+               <depth value="-1"/>
+               <texture resource="gradient"/>
+            </node>
+         </node>
+      </node>
+   </node>
+   <layout node="dead overlay transform">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <layout node="hit right overlay layout transform">
+      <x type="relative" value="1.0"/>
+      <y type="relative" value="0.5"/>
+   </layout>
+   <template name="blue dot">
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <node type="box">
+               <min x="-1" y="-1"/>
+               <max x="1" y="1"/>
+               <color r="0.3" g="0.3" b="1.0"/>
+               <texture resource="tank hud map dot"/>
+               <depth value="2"/>
+            </node>
+         </node>
+      </node>
+   </template>
+   <template name="red dot">
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <node type="box">
+               <min x="-1" y="-1"/>
+               <max x="1" y="1"/>
+               <color r="0.75" g="0" b="0"/>
+               <texture resource="tank hud map dot"/>
+               <depth value="2"/>
+            </node>
+         </node>
+      </node>
+   </template>
+   <!-- Colors -->
+   <color name="digit color" r="0" g="0.75" b="0"/>
+   <!-- Templates -->
+   <template name="digit">
+      <node type="switch" which="10" name="switch">
+         <!-- 0 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.9375"/>
+               <max x="1" y="1"/>
+            </texture>
+         </node>
+         <!-- 1 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.875"/>
+               <max x="1" y="0.9375"/>
+            </texture>
+         </node>
+         <!-- 2 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.8125"/>
+               <max x="1" y="0.875"/>
+            </texture>
+         </node>
+         <!-- 3 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.75"/>
+               <max x="1" y="0.8125"/>
+            </texture>
+         </node>
+         <!-- 4 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.6875"/>
+               <max x="1" y="0.75"/>
+            </texture>
+         </node>
+         <!-- 5 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.625"/>
+               <max x="1" y="0.6875"/>
+            </texture>
+         </node>
+         <!-- 6 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.5625"/>
+               <max x="1" y="0.625"/>
+            </texture>
+         </node>
+         <!-- 7 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.5"/>
+               <max x="1" y="0.5625"/>
+            </texture>
+         </node>
+         <!-- 8 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.4375"/>
+               <max x="1" y="0.5"/>
+            </texture>
+         </node>
+         <!-- 9 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.375"/>
+               <max x="1" y="0.4375"/>
+            </texture>
+         </node>
+         <!-- Blank - 10 -->
+         <node type="box">
+            <min x="0" y="0"/>
+            <max x="16" y="16"/>
+            <depth value="5"/>
+            <color name="digit color"/>
+            <texture resource="digits">
+               <min x="0" y="0.3125"/>
+               <max x="1" y="0.375"/>
+            </texture>
+         </node>
+      </node>
+   </template>
+
+</overlay>
+</dmz>

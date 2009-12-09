@@ -101,6 +101,15 @@
          <overlay name="blue dot"/>
       </render>
    </object-type>
+   <object-type name="blue-truck" parent="ground-vehicle">
+      <net>
+         <enum value="1.2.1.1"/>
+      </net>
+      <render>
+         <model resource="blue truck"/>
+         <overlay name="blue dot"/>
+      </render>
+   </object-type>
    <object-type name="m1a1-timeout" parent="m1a1">
       <timeout value="360"/>
    </object-type>

@@ -1,0 +1,45 @@
+<dmz>
+<overlay>
+   <color name="help text color" r="0" g="0" b="0"/>
+   <layout node="help transform">
+      <x type="relative" value="0.5"/>
+      <y type="relative" value="1.0"/>
+   </layout>
+   <node type="transform" name="help transform">
+      <node type="transform" name="help slider">
+         <position x="0" y="500"/>
+         <node type="text">
+            <text>
+           - Truck Help -
+
+           w Key:Accelerator
+           s Key:Break
+           d Key:Turn Right
+           a Key:Turn Left
+       Comma Key:Toggle Display
+           m Key:Create M1
+           t Key:Create T72
+         Tab Key:Toggle View
+     Shift-R Key:Reset Lua Runtime
+     Shift-L Key:Open Lua Console
+      Return Key:Start Position
+           ? Key:Toggle Help
+         ESC Key:Quit
+            </text>
+            <position x="-180" y="0"/>
+            <font resource="spectator font"/>
+            <height value="20"/>
+            <color name="help text color"/>
+            <depth value="15"/>
+         </node>
+         <node type="box">
+            <min x="-200" y="-340"/>
+            <max x="200" y="0"/>
+            <color r="1" g="1" b="1" a="0.5"/>
+            <depth value="14"/> 
+         </node>
+      </node>
+   </node>
+</overlay>
+</dmz>
+ 

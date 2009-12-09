@@ -24,6 +24,11 @@
          <config file="config/tank_help.xml"/>
          <config file="config/red.xml"/>
       </type>
+      <type text="Truck">
+         <config file="config/truck.xml"/>
+         <config file="config/truck_overlay.xml"/>
+         <config file="config/truck_help.xml"/>
+      </type>
       <type text="Spectator">
          <config file="config/spectator.xml"/>
          <config file="config/spectator_overlay.xml"/>

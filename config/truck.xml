@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<plugin-list>
+   <plugin name="dmzEntityPluginGroundSimple" scope="truck"/>
+   <plugin name="dmzInputPluginChannelSwitch" scope="view-switch"/>
+   <plugin name="dmzEntityPluginHide" scope="first-person"/>
+   <plugin name="dmzEntityPluginPortalTether" scope="first-person"/>
+   <plugin name="dmzEntityPluginPortalFollow" scope="third-person"/>
+   <plugin name="dmzEntityPluginDamage" scope="damage"/>
+   <plugin name="dmzEntityPluginDeadTimer" scope="damage"/>
+   <plugin name="dmzEntityPluginRestoreHealth" scope="damage"/>
+   <plugin name="dmzEntityPluginAutoRestoreHealth" scope="restore-health"/>
+   <plugin name="dmzEntityPluginOverlayDead"/>
+   <plugin name="dmzEntityPluginDustTrail"/>
+   <plugin name="dmzEntityPluginRandomizePosition" scope="start-position"/>
+   <plugin name="dmzEntityPluginTeleport"/>
+   <plugin name="dmzRenderPluginRadarOverlay" scope="radar"/>
+</plugin-list>
+<!--
+
+NOTE: <cannon> and <first-person> are defined in blue.xml and red.xml since
+the tanks dimensions are different.
+
+-->
+<restore-health>
+   <health increase="5" rate="5"/>
+</restore-health>
+<radar>
+   <radius value="58"/>
+   <range value="1000" min="1000" max="1000"/>
+</radar>
+<truck>
+   <movement speed="25"/>
+</truck>
+<view-switch>
+   <switch>
+      <channel name="first-person"/>
+      <channel name="third-person"/>
+   </switch>
+</view-switch>
+<third-person>
+   <input>
+      <channel name="third-person"/>
+   </input>
+   <offset x="0.0" y="3" z="10"/>
+</third-person>
+<damage>
+   <timer value="8.0"/>
+   <state name="Dead | Smoking | Fire"/>
+   <health value="75"/>
+</damage>
+<keyboard-controller>
+   <controller>
+      <axis id="1" negative="a" positive="d"/>
+      <axis id="2" negative="w" positive="s"/>
+      <axis id="1" negative="A" positive="D"/>
+      <axis id="2" negative="W" positive="S"/>
+      <axis id="3" negative="rightarrow" positive="leftarrow"/>
+      <axis id="4" negative="downarrow" positive="uparrow"/>
+      <button id="1" key=","/>
+      <button id="2" key="space"/>
+      <button id="3" key="."/>
+      <button id="4" key="enter"/>
+      <button id="5" key="r"/>
+      <scale key="shift" value="0.1" sticky="false"/>
+   </controller>
+</keyboard-controller>
+<start-position>
+   <center x="15" y="-130" z="30"/>
+   <radius value="100"/>
+   <heading degrees="30"/>
+</start-position>
+<first-person>
+   <offset x="0" y="2" z="0"/>
+   <input>
+      <channel name="first-person"/>
+   </input>
+</first-person>
+<archive>
+   <object name="hil" type="blue-truck">
+      <attributes>
+         <state value="Engine_On"/>
+<!--
+         NOTE: Position and Orientation are set by EntityPluginRandomizePosition
+-->
+         <velocity x="0.0" y="0.0" z="0.0"/>
+         <acceleration x="0.0" y="0.0" z="0.0"/>
+      </attributes>
+      <attributes name="Object_Human_In_The_Loop">
+         <flag value="true"/>
+      </attributes>
+      <attributes name="Entity_Health_Value">
+         <scalar value="100"/>
+      </attributes>
+   </object>
+</archive>
+
+</dmz>
+  
