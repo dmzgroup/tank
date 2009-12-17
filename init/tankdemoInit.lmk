@@ -6,6 +6,6 @@ lmk.add_files {"npsnetInit.qrc",}
 lmk.add_files {"npsnetInit.ui",}
 lmk.add_files ({"npsnetInit.h",}, {src="moc",})
 lmk.add_files {"npsnetInit.cpp",}
-lmk.add_libs { "dmzXML", "dmzApplication", "dmzKernel", }
+lmk.add_libs { "dmzFoundation", "dmzKernel", }
 lmkQt.add_libs {"QtCore","QtGui",}
 
