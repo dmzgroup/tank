@@ -1,13 +1,13 @@
 #include "npsnetInit.h"
 #include <dmzApplication.h>
 #include <dmzAppShellExt.h>
-#include <dmzCommandLine.h>
+#include <dmzFoundationCommandLine.h>
+#include <dmzFoundationXMLUtil.h>
 #include <dmzRuntimeConfig.h>
 #include <dmzRuntimeConfigToTypesBase.h>
 #include <dmzRuntimePluginFactoryLinkSymbol.h>
 #include <dmzRuntimeVersion.h>
 #include <dmzTypesHashTableStringTemplate.h>
-#include <dmzXMLUtil.h>
 
 #include <QtCore/QUrl>
 #include <QtGui/QDesktopServices>
