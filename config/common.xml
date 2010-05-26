@@ -7,6 +7,7 @@
    <plugin name="dmzArchivePluginObject"/>
    <plugin name="dmzObjectModuleBasic"/>
    <plugin name="dmzEventModuleBasic"/>
+   <plugin name="dmzEntityPluginWheels"/>
    <plugin name="dmzEventModuleCommonBasic"/>
    <plugin name="dmzQtPluginObjectInspector" unique="object-inspector"/>
 <!--

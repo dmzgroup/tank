@@ -91,6 +91,26 @@
             scale="2"
          / -->
       </audio>
+      <wheels radius="0.5">
+         <attribute name="DMZ_Left_Wheel_01"/>
+         <attribute name="DMZ_Right_Wheel_01"/>
+         <attribute name="DMZ_Left_Wheel_02"/>
+         <attribute name="DMZ_Right_Wheel_02"/>
+         <attribute name="DMZ_Left_Wheel_03"/>
+         <attribute name="DMZ_Right_Wheel_03"/>
+         <attribute name="DMZ_Left_Wheel_04"/>
+         <attribute name="DMZ_Right_Wheel_04"/>
+         <attribute name="DMZ_Left_Wheel_05"/>
+         <attribute name="DMZ_Right_Wheel_05"/>
+         <attribute name="DMZ_Left_Wheel_06"/>
+         <attribute name="DMZ_Right_Wheel_06"/>
+         <attribute name="DMZ_Left_Wheel_07"/>
+         <attribute name="DMZ_Right_Wheel_07"/>
+         <attribute name="DMZ_Left_Wheel_08"/>
+         <attribute name="DMZ_Right_Wheel_08"/>
+         <attribute name="DMZ_Left_Wheel_09"/>
+         <attribute name="DMZ_Right_Wheel_09"/>
+      </wheels>
    </object-type>
    <object-type name="m1a1" parent="tank">
       <net>

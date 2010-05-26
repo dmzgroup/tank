@@ -21,6 +21,24 @@
          <articulate>
             <attribute type="scalar" name="DMZ_Turret_1" node="dof_turret_01" axis="y"/>
             <attribute type="scalar" name="DMZ_Gun_1" node="dof_gun_01" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_01" node="dof_wheel_lt_01" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_01" node="dof_wheel_rt_01" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_02" node="dof_wheel_lt_02" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_02" node="dof_wheel_rt_02" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_03" node="dof_wheel_lt_03" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_03" node="dof_wheel_rt_03" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_04" node="dof_wheel_lt_04" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_04" node="dof_wheel_rt_04" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_05" node="dof_wheel_lt_05" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_05" node="dof_wheel_rt_05" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_06" node="dof_wheel_lt_06" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_06" node="dof_wheel_rt_06" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_07" node="dof_wheel_lt_07" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_07" node="dof_wheel_rt_07" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_08" node="dof_wheel_lt_08" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_08" node="dof_wheel_rt_08" axis="x"/>
+            <attribute type="scalar" name="DMZ_Left_Wheel_09" node="dof_wheel_lt_09" axis="x"/>
+            <attribute type="scalar" name="DMZ_Right_Wheel_09" node="dof_wheel_rt_09" axis="x"/>
          </articulate>
       </render>
    </resource>
