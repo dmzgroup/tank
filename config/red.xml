@@ -7,8 +7,8 @@
    <!-- fire rate one round every six second for m1a1 -->
    <!-- <delay value="6"/> -->
    <transform>
-      <component name="DMZ_Turret_1" axis="y" y="1.80" z="-0.8"/>
-      <component name="DMZ_Gun_1" axis="x" z="-5.2"/>
+      <component name="Turret_1" axis="y" y="1.80" z="-0.8"/>
+      <component name="Gun_1" axis="x" z="-5.2"/>
    </transform>
    <speed value="1"/>
    <speed value="1341.12"/>
@@ -23,8 +23,8 @@
       <channel name="first-person"/>
    </input>
    <transform>
-      <component name="DMZ_Turret_1" axis="y" y="1.80" z="-0.8"/>
-      <component name="DMZ_Gun_1" axis="x"/>
+      <component name="Turret_1" axis="y" y="1.80" z="-0.8"/>
+      <component name="Gun_1" axis="x"/>
    </transform>
 </first-person>
 <archive>

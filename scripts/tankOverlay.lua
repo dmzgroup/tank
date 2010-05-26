@@ -62,7 +62,7 @@ local function start (self)
       { update_channel_state = update_channel_state, },
       self)
 
-   self.objObs:register ("DMZ_Turret_1", {update_object_scalar = update_scalar}, self)
+   self.objObs:register ("Turret_1", {update_object_scalar = update_scalar}, self)
 
    if self.handle and self.active == 0 then self.timeSlice:stop (self.handle) end
 end

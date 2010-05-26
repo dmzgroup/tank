@@ -38,14 +38,14 @@ the tanks dimensions are different.
    <range value="1000" min="1000" max="1000"/>
 </radar>
 <tank>
-   <component id="3" name="DMZ_Turret_1" rate="2.094" rate-name="DMZ_Turret_1_Rate"/>
+   <component id="3" name="Turret_1" rate="2.094" rate-name="Turret_1_Rate"/>
    <component
       id="4"
-      name="DMZ_Gun_1"
+      name="Gun_1"
       rate="1"
       min="-0.05"
       max="0.785"
-      rate-name="DMZ_Gun_1_Rate"
+      rate-name="Gun_1_Rate"
    />
    <movement speed="25"/>
 </tank>

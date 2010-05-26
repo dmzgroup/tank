@@ -8,8 +8,8 @@
    <!-- <delay value="6"/> -->
    <transform>
       <component z="0.4"/>
-      <component name="DMZ_Turret_1" axis="y" y="1.65" z="-2.3"/>
-      <component name="DMZ_Gun_1" axis="x" z="-3.9"/>
+      <component name="Turret_1" axis="y" y="1.65" z="-2.3"/>
+      <component name="Gun_1" axis="x" z="-3.9"/>
    </transform>
    <speed value="1"/>
    <speed value="1341.12"/>
@@ -25,8 +25,8 @@
    </input>
    <transform>
       <component z="0.4"/>
-      <component name="DMZ_Turret_1" axis="y" y="1.65" z="-2.3"/>
-      <component name="DMZ_Gun_1" axis="x"/>
+      <component name="Turret_1" axis="y" y="1.65" z="-2.3"/>
+      <component name="Gun_1" axis="x"/>
    </transform>
 </first-person>
 <archive>
