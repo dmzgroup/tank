@@ -6,6 +6,7 @@
    <plugin name="dmzEntityPluginTeleport"/>
    <plugin name="dmzObjectPluginTimeout"/>
    <plugin name="dmzRenderPluginRadarOverlay" scope="radar"/>
+   <plugin name="dmzEntityModulePortalBasic"/>
 </plugin-list>
 <lua>
    <instance name="dmzEntityPluginFreeFly" scope="freefly"/>

@@ -20,6 +20,7 @@
    <plugin name="dmzObjectPluginTimeout"/>
    <plugin name="dmzObjectPluginAutoCounter" scope="auto-reload"/>
    <plugin name="dmzRenderPluginRadarOverlay" scope="radar"/>
+   <plugin name="dmzEntityModulePortalBasic"/>
 </plugin-list>
 <!--
 
