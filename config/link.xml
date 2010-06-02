@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<plugin-list>
+   <plugin name="dmzRenderPluginLinkOSG" scope="render"/>
+</plugin-list>
+<render>
+   <link attribute="link-test" r="1.0" g="0" b="0"/>
+</render>
+<archive>
+   <object name="p1" type="m1a1">
+      <attributes>
+         <position x="0.0" y="0.0" z="0.0"/>
+      </attributes>
+      <attributes name="link-test">
+         <links>
+            <object name="p2"/>
+         </links>
+      </attributes>
+   </object>
+   <object name="p2" type="m1a1">
+      <attributes>
+         <position x="20.0" y="20.0" z="20.0"/>
+      </attributes>
+   </object>
+</archive>
+</dmz>
+  
