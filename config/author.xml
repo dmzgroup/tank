@@ -2,29 +2,34 @@
 <dmz>
 <plugin-list>
    <plugin name="dmzObjectModuleSelectBasic"/>
+   <plugin name="dmzObjectPluginSelect"/>
+   <plugin name="dmzObjectPluginHighlight" scope="highlight"/>
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="select-event"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="mouse-move-event"/>
 </plugin-list>
-<lua>
-   <instance name="SelectObject"/>
-   <instance name="HighlightObject"/>
-</lua>
+<runtime>
+   <object-type name="link-attribute"/>
+</runtime>
+<highlight>
+   <attribute-object-type name="link-attribute"/>
+</highlight>
 <select-event>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
    </input>
+   <target name="dmzObjectPluginSelect"/>
    <converter start="first">
       <state name="first" type="basic">
          <condition
                button="1"
                result="position"
                action="released"
-               message="SelectEvent"
+               message="Object_Select_Message"
                next="first"
          >
-            <attribute type="object" name="object"/>
+            <attribute type="object" name="handle"/>
          </condition>
       </state>
    </converter>
@@ -33,16 +38,16 @@
    <input>
       <source name="DMZ_Render_Main_Portal"/>
    </input>
-   <target name="HighlightObject"/>
-   <converter type="2D" start="first">
+   <target name="dmzObjectPluginHighlight"/>
+   <converter start="first">
       <state name="first" type="basic">
          <condition
                action="moved"
                result="position"
                next="first"
-               message="MouseMoveEvent">
-            <attribute type="position" name="position"/>
-            <attribute type="object" name="object"/>
+               message="Mouse_Move_Message"
+         >
+            <attribute type="object" name="handle"/>
          </condition>
       </state>
    </converter>
