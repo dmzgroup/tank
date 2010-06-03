@@ -3,7 +3,8 @@
 <plugin-list>
    <plugin name="dmzObjectModuleSelectBasic"/>
    <plugin name="dmzObjectPluginSelect"/>
-   <plugin name="dmzObjectPluginHighlight" scope="highlight"/>
+   <plugin name="dmzObjectPluginHighlight"/>
+   <plugin name="dmzObjectPluginAutoLinkAttribute" scope="auto-link-attribute"/>
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="select-event"/>
@@ -12,9 +13,9 @@
 <runtime>
    <object-type name="link-attribute"/>
 </runtime>
-<highlight>
-   <attribute-object-type name="link-attribute"/>
-</highlight>
+<auto-link-attribute>
+   <attribute name="link-test" type="link-attribute"/>
+</auto-link-attribute>
 <select-event>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
