@@ -21,26 +21,26 @@
          <articulate>
             <attribute type="scalar" name="Turret_1" node="dof_turret_01" axis="y"/>
             <attribute type="scalar" name="Gun_1" node="dof_gun_01" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_1" node="dof_wheel_lt_01" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_1" node="dof_wheel_rt_01" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_2" node="dof_wheel_lt_02" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_2" node="dof_wheel_rt_02" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_3" node="dof_wheel_lt_03" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_3" node="dof_wheel_rt_03" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_4" node="dof_wheel_lt_04" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_4" node="dof_wheel_rt_04" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_5" node="dof_wheel_lt_05" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_5" node="dof_wheel_rt_05" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_6" node="dof_wheel_lt_06" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_6" node="dof_wheel_rt_06" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_7" node="dof_wheel_lt_07" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_7" node="dof_wheel_rt_07" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_8" node="dof_wheel_lt_08" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_8" node="dof_wheel_rt_08" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_9" node="dof_wheel_lt_09" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_9" node="dof_wheel_rt_09" axis="x"/>
-            <attribute type="scalar" name="Wheel_Left_10" node="dof_wheel_lt_10" axis="x"/>
-            <attribute type="scalar" name="Wheel_Right_10" node="dof_wheel_rt_10" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_1" node="dof_wheel_lt_01" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_1" node="dof_wheel_rt_01" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_2" node="dof_wheel_lt_02" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_2" node="dof_wheel_rt_02" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_3" node="dof_wheel_lt_03" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_3" node="dof_wheel_rt_03" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_4" node="dof_wheel_lt_04" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_4" node="dof_wheel_rt_04" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_5" node="dof_wheel_lt_05" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_5" node="dof_wheel_rt_05" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_6" node="dof_wheel_lt_06" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_6" node="dof_wheel_rt_06" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_7" node="dof_wheel_lt_07" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_7" node="dof_wheel_rt_07" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_8" node="dof_wheel_lt_08" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_8" node="dof_wheel_rt_08" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_9" node="dof_wheel_lt_09" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_9" node="dof_wheel_rt_09" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_10" node="dof_wheel_lt_10" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_10" node="dof_wheel_rt_10" axis="x"/>
          </articulate>
       </render>
    </resource>
