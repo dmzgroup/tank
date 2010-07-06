@@ -34,10 +34,8 @@ the tanks dimensions are different.
    <movement speed="25"/>
 </truck>
 <view-switch>
-   <switch>
-      <channel name="first-person"/>
-      <channel name="third-person"/>
-   </switch>
+   <channel name="first-person"/>
+   <channel name="third-person"/>
 </view-switch>
 <third-person>
    <input>
