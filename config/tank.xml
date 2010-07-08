@@ -4,6 +4,7 @@
    <plugin name="dmzEntityPluginArticulate" scope="tank"/>
    <plugin name="dmzEntityPluginGroundSimple" scope="tank"/>
    <plugin name="dmzInputPluginChannelSwitch" scope="view-switch"/>
+   <plugin name="dmzInputPluginChannelRules" scope="view-switch"/>
    <plugin name="dmzEntityPluginPortalArticulate" scope="first-person"/>
    <plugin name="dmzEntityPluginHide" scope="first-person"/>
    <plugin name="dmzEntityPluginPortalFollow" scope="third-person"/>
@@ -51,7 +52,7 @@ the tanks dimensions are different.
    <movement speed="25"/>
 </tank>
 <view-switch>
-   <channel name="first-person"/>
+   <channel name="first-person" default="True"/>
    <channel name="third-person"/>
 </view-switch>
 <third-person>
